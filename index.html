@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BPO Innova - Outsourcing com Automação e Autonomia</title>
+    <meta name="description" content="BPO Innova: Especialistas em outsourcing com automação de processos. Soluções personalizadas para empresas de médio e grande porte. Contabilidade, Fiscal, Financeiro e Folha de Pagamento.">
+    <meta name="keywords" content="BPO, outsourcing, automação, processos, contabilidade, fiscal, financeiro, folha de pagamento, São Paulo">
+    <meta name="author" content="BPO Innova">
+    <meta property="og:title" content="BPO Innova - Outsourcing com Automação">
+    <meta property="og:description" content="Especialistas em transformar processos com tecnologia. Soluções personalizadas para seu negócio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bpoinnova.com">
+    <link rel="canonical" href="https://bpoinnova.com">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -130,6 +139,106 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from { 
+                opacity: 0; 
+                transform: translateX(-50px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from { 
+                opacity: 0; 
+                transform: translateX(50px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+        
+        .scale-in {
+            animation: scaleIn 0.6s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from { 
+                opacity: 0; 
+                transform: scale(0.8); 
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1); 
+            }
+        }
+        
+        .bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { 
+                opacity: 0; 
+                transform: scale(0.3); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.05); 
+            }
+            70% { 
+                transform: scale(0.9); 
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1); 
+            }
+        }
+        
+        .typing-effect {
+            overflow: hidden;
+            border-right: 2px solid var(--primary-orange);
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--primary-orange); }
+        }
+        
+        .whatsapp-pulse {
+            animation: whatsappPulse 2s infinite;
+        }
+        
+        @keyframes whatsappPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
     </style>
 </head>
 <body class="text-gray-700">
@@ -138,8 +247,8 @@
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-primary-green">
-                        <span class="text-primary-orange">BPO</span> Innova
+                    <a href="#" class="flex items-center">
+                        <img src="img/logo.png" alt="BPO Innova" class="h-12 w-auto">
                     </a>
                 </div>
                 
@@ -180,13 +289,34 @@
     <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-black-texture text-white">
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                <div class="md:w-1/2 mb-12 md:mb-0 slide-in-left">
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        Outsourcing com automação e autonomia para o seu negócio
+                        <span class="typing-effect">Outsourcing com automação</span><br>
+                        <span class="text-primary-orange">e autonomia</span> para o seu negócio
                     </h1>
                     <p class="text-xl mb-8 opacity-90">
                         Mais de 7 anos transformando processos com tecnologia e eficiência para empresas de médio e grande porte.
                     </p>
+                    
+                    <!-- Estatísticas -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2" data-count="150">0</div>
+                            <div class="text-sm opacity-80">Clientes Atendidos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2" data-count="7">0</div>
+                            <div class="text-sm opacity-80">Anos de Experiência</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2" data-count="95">0</div>
+                            <div class="text-sm opacity-80">% de Satisfação</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2" data-count="24">0</div>
+                            <div class="text-sm opacity-80">Horas de Suporte</div>
+                        </div>
+                    </div>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#contato" class="bg-primary-orange hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-bold text-lg text-center transition">
                             Falar com um especialista
@@ -196,8 +326,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center fade-in">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BPO Innova - Automação de Processos" class="rounded-lg shadow-2xl animate-float max-w-md w-full">
+                <div class="md:w-1/2 flex justify-center slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BPO Innova - Processos, Automação e Outsourcing" class="rounded-lg shadow-2xl animate-float max-w-md w-full">
                 </div>
             </div>
         </div>
@@ -253,6 +383,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-600 mb-4">Conheça nossa expertise certificada</p>
+                        <a href="https://wa.me/551112345678" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition whatsapp-pulse">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> Falar pelo WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -493,6 +630,87 @@
         </div>
     </section>
 
+        <!-- Cases de Sucesso -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Cases de Sucesso</h2>
+                    <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Conheça alguns dos resultados que alcançamos para nossos clientes.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Case 1 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition duration-300 scale-in">
+                        <div class="bg-primary-green w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-green mb-4 text-center">Empresa de Tecnologia</h3>
+                        <div class="space-y-3 text-center">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Redução de tempo:</span>
+                                <span class="font-bold text-primary-orange">-60%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Aumento de precisão:</span>
+                                <span class="font-bold text-primary-orange">+95%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">ROI em 6 meses:</span>
+                                <span class="font-bold text-primary-orange">+300%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 2 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition duration-300 scale-in">
+                        <div class="bg-primary-green w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-industry text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-green mb-4 text-center">Indústria Manufatureira</h3>
+                        <div class="space-y-3 text-center">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Automação de processos:</span>
+                                <span class="font-bold text-primary-orange">85%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Redução de custos:</span>
+                                <span class="font-bold text-primary-orange">-40%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Produtividade:</span>
+                                <span class="font-bold text-primary-orange">+150%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 3 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition duration-300 scale-in">
+                        <div class="bg-primary-green w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-building text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-green mb-4 text-center">Empresa de Serviços</h3>
+                        <div class="space-y-3 text-center">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Tempo de resposta:</span>
+                                <span class="font-bold text-primary-orange">-70%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Satisfação do cliente:</span>
+                                <span class="font-bold text-primary-orange">+90%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Escalabilidade:</span>
+                                <span class="font-bold text-primary-orange">+200%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!-- Contato -->
     <section id="contato" class="py-20 bg-black-texture text-white">
         <div class="container mx-auto px-6 relative z-10">
@@ -525,7 +743,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Telefone</h4>
-                                <p class="opacity-90">(11) 1234-5678</p>
+                                <a href="tel:+551112345678" class="opacity-90 hover:opacity-100 transition">(11) 1234-5678</a>
                             </div>
                         </div>
                         
@@ -535,7 +753,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">E-mail</h4>
-                                <p class="opacity-90">contato@bpoinnova.com.br</p>
+                                <a href="mailto:contato@bpoinnova.com.br" class="opacity-90 hover:opacity-100 transition">contato@bpoinnova.com.br</a>
                             </div>
                         </div>
                         
@@ -548,9 +766,24 @@
                                 <p class="opacity-90">Segunda a sexta, das 9h às 18h</p>
                             </div>
                         </div>
+                        <div class="mt-6">
+                            <h4 class="font-bold mb-3">Nossa Localização</h4>
+                            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.703284620108!2d-46.73651912467034!3d-23.543172078812297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e5465cfc7a1%3A0xaae37380391b0217!2sVilla%20Lobos%20Office%20Park!5e0!3m2!1spt-BR!2sbr!4v1753742365259!5m2!1spt-BR!2sbr" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    class="w-full">
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="mt-10">
+                    <div class="mt-8 pt-6 border-t border-white border-opacity-20">
                         <h4 class="font-bold mb-4">Nos siga nas redes sociais</h4>
                         <div class="flex space-x-4">
                             <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
@@ -565,6 +798,13 @@
                             <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
                                 <i class="fab fa-youtube"></i>
                             </a>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-white border-opacity-20">
+                            <div class="flex items-center justify-center">
+                                <img src="img/ggi.png" alt="GGI Independent Member" class="h-8 w-auto opacity-80">
+                            </div>
+                            <p class="text-center text-sm opacity-70 mt-2">GGI Independent Member</p>
                         </div>
                     </div>
                 </div>
@@ -614,36 +854,48 @@
         </div>
     </section>
 
-    <!-- Mapa -->
+    <!-- Credenciais e Certificações -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Nossa Localização</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Credenciais e Certificações</h2>
                 <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Venha nos visitar ou entre em contato para conhecer nossas soluções.
+                    Nossa expertise é reconhecida por organizações internacionais de prestígio.
                 </p>
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.703284620108!2d-46.73651912467034!3d-23.543172078812297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e5465cfc7a1%3A0xaae37380391b0217!2sVilla%20Lobos%20Office%20Park!5e0!3m2!1spt-BR!2sbr!4v1753742365259!5m2!1spt-BR!2sbr" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="w-full">
-                    </iframe>
-                </div>
-                
-                <div class="mt-8 text-center">
-                    <div class="bg-white rounded-lg shadow-md p-6 inline-block">
-                        <h3 class="text-xl font-bold text-primary-green mb-2">BPO Innova</h3>
-                        <p class="text-gray-600 mb-2">Villa Lobos Office Park - Torre A - Av. Queiroz Filho, 1700 - Sala 301</p>
-                        <p class="text-gray-500 text-sm">Vila Hamburguesa, São Paulo - SP, 05319-000</p>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
+                        <div class="flex flex-col items-center">
+                            <img src="img/ggi.png" alt="GGI Independent Member" class="h-16 w-auto mb-4">
+                            <h3 class="text-xl font-bold text-primary-green mb-2">GGI Independent Member</h3>
+                            <p class="text-gray-600 max-w-md">
+                                Membro independente da GGI (Geneva Group International), 
+                                rede global de empresas de consultoria e auditoria.
+                            </p>
+                        </div>
+                        
+                        <div class="hidden md:block w-px h-24 bg-gray-300"></div>
+                        
+                        <div class="flex flex-col items-center">
+                            <div class="bg-primary-green w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-certificate text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-green mb-2">Certificação de Qualidade</h3>
+                            <p class="text-gray-600 max-w-md">
+                                Processos certificados e metodologias reconhecidas 
+                                internacionalmente para máxima confiabilidade.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-600 mb-4">Conheça nossa expertise certificada</p>
+                        <a href="https://wa.me/551112345678" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition whatsapp-pulse">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> Falar pelo WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -655,10 +907,10 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-8 md:mb-0">
-                    <a href="#" class="text-2xl font-bold">
-                        <span class="text-primary-orange">BPO</span> Innova
+                    <a href="#" class="flex items-center mb-2">
+                        <img src="img/logo.png" alt="BPO Innova" class="h-10 w-auto">
                     </a>
-                    <p class="mt-2 opacity-90">Outsourcing com tecnologia e eficiência.</p>
+                    <p class="opacity-90">Outsourcing com tecnologia e eficiência.</p>
                 </div>
                 
                 <div class="flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 text-center md:text-left">
@@ -782,7 +1034,7 @@
         
         // Animation on scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.fade-in');
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .bounce-in');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -790,9 +1042,55 @@
                 
                 if (elementPosition < screenPosition) {
                     element.style.opacity = '1';
+                    element.style.animationPlayState = 'running';
                 }
             });
         };
+        
+        // Contador animado
+        const animateCounter = (element) => {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        };
+        
+        // Observador de interseção para contadores
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('[data-count]');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        // Observar seções com contadores
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSection = document.querySelector('.bg-black-texture');
+            if (heroSection) {
+                observer.observe(heroSection);
+            }
+        });
         
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
