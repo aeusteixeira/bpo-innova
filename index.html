@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPO Innova - Outsourcing com Automação e Autonomia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #094F2B;
+            --primary-orange: #ED6611;
+            --primary-black: #000000;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .bg-primary-green {
+            background-color: var(--primary-green);
+        }
+        
+        .text-primary-green {
+            color: var(--primary-green);
+        }
+        
+        .bg-primary-orange {
+            background-color: var(--primary-orange);
+        }
+        
+        .text-primary-orange {
+            color: var(--primary-orange);
+        }
+        
+        .border-primary-orange {
+            border-color: var(--primary-orange);
+        }
+        
+        .bg-primary-black {
+            background-color: var(--primary-black);
+        }
+        
+        .text-primary-black {
+            color: var(--primary-black);
+        }
+        
+        .bg-black-texture {
+            background-color: #000000;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 35%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.01) 0%, transparent 60%),
+                linear-gradient(135deg, transparent 45%, rgba(255, 255, 255, 0.015) 50%, transparent 55%),
+                linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.01) 50%, transparent 52%);
+            background-size: 120px 120px, 180px 180px, 240px 240px, 300px 300px, 400px 400px;
+            background-position: 0 0, 60px 60px, 120px 120px, 0 0, 200px 200px;
+            position: relative;
+        }
+        
+        .bg-black-texture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.005) 2px,
+                    rgba(255, 255, 255, 0.005) 4px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.005) 2px,
+                    rgba(255, 255, 255, 0.005) 4px
+                );
+            pointer-events: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-orange);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(237, 102, 17, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary-green">
+                        <span class="text-primary-orange">BPO</span> Innova
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" class="text-gray-700 hover:text-primary-orange transition">Sobre</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-primary-orange transition">Serviços</a>
+                    <a href="#diferenciais" class="text-gray-700 hover:text-primary-orange transition">Diferenciais</a>
+                    <a href="#depoimentos" class="text-gray-700 hover:text-primary-orange transition">Depoimentos</a>
+                    <a href="#contato" class="text-gray-700 hover:text-primary-orange transition">Contato</a>
+                </div>
+                
+                <a href="#contato" class="hidden md:block bg-primary-orange text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                    Falar com um especialista
+                </a>
+                
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden flex flex-col mt-4 space-y-4" id="mobile-menu">
+                <a href="#sobre" class="px-2 py-1 text-gray-700 hover:text-primary-orange transition">Sobre</a>
+                <a href="#servicos" class="px-2 py-1 text-gray-700 hover:text-primary-orange transition">Serviços</a>
+                <a href="#diferenciais" class="px-2 py-1 text-gray-700 hover:text-primary-orange transition">Diferenciais</a>
+                <a href="#depoimentos" class="px-2 py-1 text-gray-700 hover:text-primary-orange transition">Depoimentos</a>
+                <a href="#contato" class="px-2 py-1 text-gray-700 hover:text-primary-orange transition">Contato</a>
+                <a href="#contato" class="bg-primary-orange text-white px-4 py-2 rounded-full font-medium text-center hover:bg-opacity-90 transition">
+                    Falar com um especialista
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-black-texture text-white">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Outsourcing com automação e autonomia para o seu negócio
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Mais de 7 anos transformando processos com tecnologia e eficiência para empresas de médio e grande porte.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contato" class="bg-primary-orange hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-bold text-lg text-center transition">
+                            Falar com um especialista
+                        </a>
+                        <a href="#servicos" class="border-2 border-white hover:bg-white hover:bg-opacity-10 text-white px-8 py-4 rounded-full font-bold text-lg text-center transition">
+                            Nossos serviços
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BPO Innova - Automação de Processos" class="rounded-lg shadow-2xl animate-float max-w-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Sobre a BPO Innova</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Especialistas em transformar processos com tecnologia, oferecendo soluções personalizadas que geram autonomia e eficiência para seu negócio.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipe BPO Innova" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary-green mb-6">Nossa História</h3>
+                        <p class="mb-6 text-gray-600">
+                            Há mais de 7 anos no mercado, a BPO Innova surgiu com o propósito de revolucionar a terceirização de serviços através da automação e inovação tecnológica.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary-green bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-bullseye text-primary-orange text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary-green mb-1">Foco Estratégico</h4>
+                                    <p class="text-gray-600">Atendemos empresas de médio e grande porte que buscam excelência operacional e redução de custos.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary-green bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-chart-line text-primary-orange text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary-green mb-1">Áreas de Expertise</h4>
+                                    <p class="text-gray-600">Contabilidade, Fiscal, Financeiro, Folha de Pagamento e soluções tecnológicas personalizadas.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-primary-green bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-lightbulb text-primary-orange text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary-green mb-1">Visão</h4>
+                                    <p class="text-gray-600">Ser referência em outsourcing inteligente, combinando expertise humana com tecnologia de ponta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Soluções completas para otimizar seus processos e impulsionar seus resultados.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-500">
+                    <div class="bg-primary-green p-6 text-white">
+                        <i class="fas fa-robot text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Automação de Processos</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Transformamos processos manuais em fluxos automatizados, reduzindo erros e aumentando produtividade.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> RPA (Robotic Process Automation)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Integração de sistemas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Workflows inteligentes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-500">
+                    <div class="bg-primary-green p-6 text-white">
+                        <i class="fas fa-handshake text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Terceirização de BackOffice</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Terceirize seus processos administrativos com segurança e eficiência, focando no core business da sua empresa.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Contabilidade e Fiscal
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Financeiro e Tesouraria
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Folha de Pagamento
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-500">
+                    <div class="bg-primary-green p-6 text-white">
+                        <i class="fas fa-laptop-code text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Soluções Tecnológicas</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            Desenvolvemos ferramentas personalizadas para atender às necessidades específicas do seu negócio.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Sistemas de gestão
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Dashboards e BI
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-orange mr-2"></i> Desenvolvimento sob demanda
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="py-20 bg-black-texture text-white">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">O que nos diferencia</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Conheça os pilares que fazem da BPO Innova a escolha certa para sua empresa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Diferencial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm border border-white border-opacity-20 transition hover:bg-opacity-20">
+                    <div class="bg-primary-orange w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Inovação Contínua</h3>
+                    <p class="text-center opacity-90">
+                        Estamos sempre à frente, incorporando as últimas tecnologias para oferecer soluções modernas e eficientes.
+                    </p>
+                </div>
+                
+                <!-- Diferencial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm border border-white border-opacity-20 transition hover:bg-opacity-20">
+                    <div class="bg-primary-orange w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-sliders-h text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Personalização Total</h3>
+                    <p class="text-center opacity-90">
+                        Entendemos que cada negócio é único. Nossas soluções são totalmente adaptadas às suas necessidades específicas.
+                    </p>
+                </div>
+                
+                <!-- Diferencial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm border border-white border-opacity-20 transition hover:bg-opacity-20">
+                    <div class="bg-primary-orange w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Segurança e Confiabilidade</h3>
+                    <p class="text-center opacity-90">
+                        Utilizamos os mais altos padrões de segurança da informação para proteger seus dados e processos.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contato" class="inline-block bg-primary-orange hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-bold text-lg transition">
+                    Quero conhecer mais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">O que nossos clientes dizem</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A satisfação dos nossos clientes é o nosso maior orgulho.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary-orange text-3xl mr-2">"</div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Ana Carolina</h4>
+                                <p class="text-sm text-gray-500">Diretora Financeira</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "A BPO Innova revolucionou nosso departamento financeiro. Em 6 meses, reduzimos 40% do tempo gasto com processos manuais e aumentamos a precisão dos nossos relatórios."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary-orange text-3xl mr-2">"</div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Ricardo Almeida</h4>
+                                <p class="text-sm text-gray-500">CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "A parceria com a BPO Innova nos permitiu focar no crescimento do negócio enquanto eles cuidam de toda a operação contábil com excelência. A tecnologia que implementaram é impressionante."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary-orange text-3xl mr-2">"</div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Fernanda Costa</h4>
+                                <p class="text-sm text-gray-500">Gerente de RH</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "A terceirização da folha de pagamento com a BPO Innova foi a melhor decisão. Além da precisão nos cálculos, o sistema de autoatendimento que desenvolveram para nossos colaboradores é fantástico."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-black-texture text-white">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Entre em contato</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Pronto para transformar seus processos? Fale com nossos especialistas.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="lg:w-1/2 bg-primary-green text-white p-12">
+                    <h3 class="text-2xl font-bold mb-6">Informações de contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Endereço</h4>
+                                <p class="opacity-90">Villa Lobos Office Park - Torre A - Av. Queiroz Filho, 1700 - Sala 301 - Vila Hamburguesa, São Paulo - SP, 05319-000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telefone</h4>
+                                <p class="opacity-90">(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">E-mail</h4>
+                                <p class="opacity-90">contato@bpoinnova.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Horário de atendimento</h4>
+                                <p class="opacity-90">Segunda a sexta, das 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-bold mb-4">Nos siga nas redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 p-12">
+                    <h3 class="text-2xl font-bold text-primary-green mb-6">Envie uma mensagem</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-primary-green font-medium mb-2">Nome completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-primary-green font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-primary-green font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-primary-green font-medium mb-2">Empresa</label>
+                            <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-primary-green font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary-orange hover:bg-opacity-90 text-white font-bold py-4 px-6 rounded-lg transition">
+                            Enviar mensagem
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-primary-green mb-4">Ou se preferir:</p>
+                        <a href="https://wa.me/551112345678" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> Falar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-green mb-4">Nossa Localização</h2>
+                <div class="w-20 h-1 bg-primary-orange mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Venha nos visitar ou entre em contato para conhecer nossas soluções.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.703284620108!2d-46.73651912467034!3d-23.543172078812297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e5465cfc7a1%3A0xaae37380391b0217!2sVilla%20Lobos%20Office%20Park!5e0!3m2!1spt-BR!2sbr!4v1753742365259!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full">
+                    </iframe>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <div class="bg-white rounded-lg shadow-md p-6 inline-block">
+                        <h3 class="text-xl font-bold text-primary-green mb-2">BPO Innova</h3>
+                        <p class="text-gray-600 mb-2">Villa Lobos Office Park - Torre A - Av. Queiroz Filho, 1700 - Sala 301</p>
+                        <p class="text-gray-500 text-sm">Vila Hamburguesa, São Paulo - SP, 05319-000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-green text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">
+                        <span class="text-primary-orange">BPO</span> Innova
+                    </a>
+                    <p class="mt-2 opacity-90">Outsourcing com tecnologia e eficiência.</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 text-center md:text-left">
+                    <div>
+                        <h4 class="font-bold mb-3">Links rápidos</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#sobre" class="opacity-90 hover:opacity-100 transition">Sobre</a></li>
+                            <li><a href="#servicos" class="opacity-90 hover:opacity-100 transition">Serviços</a></li>
+                            <li><a href="#diferenciais" class="opacity-90 hover:opacity-100 transition">Diferenciais</a></li>
+                            <li><a href="#contato" class="opacity-90 hover:opacity-100 transition">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-3">Serviços</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="opacity-90 hover:opacity-100 transition">Automação</a></li>
+                            <li><a href="#" class="opacity-90 hover:opacity-100 transition">Terceirização</a></li>
+                            <li><a href="#" class="opacity-90 hover:opacity-100 transition">Soluções Tech</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-3">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="opacity-90 hover:opacity-100 transition">Política de Privacidade</a></li>
+                            <li><a href="#" class="opacity-90 hover:opacity-100 transition">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-90 mb-4 md:mb-0">© 2023 BPO Innova. Todos os direitos reservados.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="opacity-90 hover:opacity-100 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="opacity-90 hover:opacity-100 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="opacity-90 hover:opacity-100 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="opacity-90 hover:opacity-100 transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-orange text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            alert('Obrigado pelo seu contato! Um especialista entrará em contato em breve.');
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                }
+            });
+        };
+        
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
