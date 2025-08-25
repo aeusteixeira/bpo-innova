@@ -260,17 +260,94 @@
             text-transform: uppercase;
         }
 
-         /* Featured Services (cards com imagem) */
+         /* Featured Services (cards com imagem de fundo) */
          .section-featured { background: #ffffff; padding: 64px 0; }
          .section-featured h2 { color: var(--hero-gold); font-weight: 700; }
-         .feature-card { overflow: hidden; border: none; background: transparent; }
-         .feature-img { width:100%; height: 360px; object-fit: cover; transition: transform .5s ease; display:block; }
-         .feature-card:hover .feature-img { transform: scale(1.05); }
-         .feature-overlay { position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,.0) 60%); }
-         .feature-caption { position:absolute; left:1.25rem; right:1.25rem; bottom:1.25rem; color:#fff; }
-         .feature-caption h5 { margin:0 0 .25rem; font-weight:700; }
-         .feature-link { color:#fff; text-decoration:none; font-weight:600; }
-         .feature-link:hover { color: #ffd27a; }
+         
+         .feature-card { 
+           height: 360px; 
+           border-radius: 16px; 
+           overflow: hidden; 
+           box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+           transition: all 0.4s ease;
+           cursor: pointer;
+         }
+         
+         .feature-card:hover { 
+           transform: translateY(-8px);
+           box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+         }
+         
+         .feature-card-bg { 
+           width: 100%; 
+           height: 100%; 
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat;
+           position: relative;
+         }
+         
+         .feature-card-overlay { 
+           position: absolute; 
+           inset: 0; 
+           background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.1) 100%);
+           display: flex;
+           align-items: flex-end;
+           padding: 2rem;
+         }
+         
+         .feature-card-content { 
+           color: #fff; 
+           width: 100%;
+         }
+         
+         .feature-card-content h5 { 
+           margin: 0 0 0.75rem; 
+           font-weight: 700; 
+           font-size: 1.25rem;
+           line-height: 1.3;
+           text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+         }
+         
+         .feature-card-content p { 
+           margin: 0 0 1rem; 
+           color: rgba(255,255,255,0.9);
+           font-size: 0.95rem;
+           line-height: 1.5;
+           text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+         }
+         
+         .feature-card-btn { 
+           color: #fff; 
+           text-decoration: none; 
+           font-weight: 600;
+           font-size: 0.9rem;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
+           padding: 0.5rem 0;
+           border-bottom: 2px solid #D07400;
+           transition: all 0.3s ease;
+           display: inline-block;
+         }
+         
+         .feature-card-btn:hover { 
+           color: #ffd27a; 
+           border-bottom-color: #ffd27a;
+           transform: translateX(4px);
+         }
+         
+         /* Responsividade para os cards */
+         @media (max-width: 991.98px) {
+           .feature-card { height: 320px; }
+           .feature-card-overlay { padding: 1.5rem; }
+         }
+         
+         @media (max-width: 767.98px) {
+           .feature-card { height: 280px; }
+           .feature-card-overlay { padding: 1.25rem; }
+           .feature-card-content h5 { font-size: 1.1rem; }
+           .feature-card-content p { font-size: 0.9rem; }
+         }
 
          /* CTA band - visual mais clean e moderno */
          .cta-band { 
@@ -291,27 +368,158 @@
          .btn-cta-outline:hover{ background:#004E29; border-color:#004E29; color:#fff; }
 
          /* Produtos e Soluções (mosaico imagem/texto) */
-         .solutions { background:#ffffff; }
-         .solutions .tile-row { min-height: 520px; }
-         .tile-img { position:relative; min-height: 520px; overflow:hidden; }
-         .tile-img > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition: transform .7s ease; }
-         .tile-img:hover > img { transform: scale(1.04); }
-         .tile-text { background:#f6f8fb; display:flex; align-items:center; box-shadow: 0 14px 36px rgba(0,0,0,.06); }
-         .tile-inner { padding: 56px 48px; max-width: 640px; }
-         .tile-kicker { color:#D07400; font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:.85rem; }
-         .tile-title { color:#0f1720; font-weight:800; }
-         .tile-desc { color:#5c6670; }
-         .tile-accent { width:56px; height:4px; background:#D07400; border-radius:2px; }
-         .btn-tile-primary { background:#D07400; border-color:#D07400; color:#fff; font-weight:700; }
-         .btn-tile-primary:hover { background:#004E29; border-color:#004E29; color:#fff; }
-         .btn-tile-outline { border-color:#D07400; color:#D07400; font-weight:700; }
-         .btn-tile-outline:hover { background:#D07400; color:#fff; }
+         .solutions { 
+           background: #ffffff; 
+           padding: 80px 0;
+           position: relative;
+         }
+         
+         .solutions::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           height: 1px;
+           background: linear-gradient(90deg, transparent, rgba(208,116,0,0.2), transparent);
+         }
+         
+         .solutions .tile-row { 
+           min-height: 560px; 
+           margin: 0;
+         }
+         
+         .tile-img { 
+           position: relative; 
+           min-height: 560px; 
+           overflow: hidden;
+           background: #f8f9fa;
+         }
+         
+         .tile-img > img { 
+           position: absolute; 
+           inset: 0; 
+           width: 100%; 
+           height: 100%; 
+           object-fit: cover; 
+           transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+           filter: brightness(0.95);
+         }
+         
+         .tile-img:hover > img { 
+           transform: scale(1.06); 
+           filter: brightness(1.05);
+         }
+         
+         .tile-overlay {
+           position: absolute;
+           inset: 0;
+           background: linear-gradient(135deg, rgba(208,116,0,0.1) 0%, transparent 100%);
+           opacity: 0;
+           transition: opacity 0.6s ease;
+           z-index: 1;
+         }
+         
+         .tile-img:hover .tile-overlay {
+           opacity: 1;
+         }
+         
+         .tile-text { 
+           background: #f8f9fa; 
+           display: flex; 
+           align-items: center; 
+           box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+           position: relative;
+           transition: all 0.4s ease;
+         }
+         
+         .tile-text:hover {
+           background: #ffffff;
+           box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+         }
+         
+         .tile-inner { 
+           padding: 64px 56px; 
+           max-width: 640px; 
+           width: 100%;
+         }
+         
+         .tile-title { 
+           color: #0f1720; 
+           font-weight: 800; 
+           font-size: clamp(1.8rem, 3vw, 2.2rem);
+           line-height: 1.2;
+           margin-bottom: 1.5rem;
+         }
+         
+         .tile-desc { 
+           color: #5c6670; 
+           font-size: 1.05rem;
+           line-height: 1.7;
+           margin-bottom: 2rem;
+         }
+         
+         .tile-accent { 
+           width: 64px; 
+           height: 4px; 
+           background: linear-gradient(90deg, #D07400, #ffd27a);
+           border-radius: 2px;
+           margin-bottom: 1.5rem;
+         }
+         
+         .btn-tile-primary { 
+           background: #D07400; 
+           border-color: #D07400; 
+           color: #fff; 
+           font-weight: 700;
+           padding: 0.75rem 1.5rem;
+           border-radius: 8px;
+           transition: all 0.3s ease;
+           box-shadow: 0 4px 16px rgba(208,116,0,0.3);
+         }
+         
+         .btn-tile-primary:hover { 
+           background: #004E29; 
+           border-color: #004E29; 
+           color: #fff;
+           transform: translateY(-2px);
+           box-shadow: 0 8px 24px rgba(0,78,41,0.4);
+         }
+         
+         .btn-tile-outline { 
+           border-color: #D07400; 
+           color: #D07400; 
+           font-weight: 700;
+           padding: 0.75rem 1.5rem;
+           border-radius: 8px;
+           transition: all 0.3s ease;
+           border-width: 2px;
+         }
+         
+         .btn-tile-outline:hover { 
+           background: #D07400; 
+           color: #fff;
+           transform: translateY(-2px);
+           box-shadow: 0 8px 24px rgba(208,116,0,0.3);
+         }
          /* Animações sutis */
          .reveal-left{ opacity:0; transform:translateX(-14px); animation:reveal .7s ease .1s forwards; }
          .reveal-right{ opacity:0; transform:translateX(14px); animation:reveal .7s ease .1s forwards; }
          @keyframes reveal{ to{ opacity:1; transform:none; } }
-         @media (max-width: 991.98px){ .solutions .tile-row{ min-height: 460px; } .tile-img{ min-height: 360px; } }
-         @media (max-width: 767.98px){ .tile-img{ min-height: 260px; } .tile-inner{ padding:28px; } }
+         
+         /* Responsividade para Produtos e Soluções */
+         @media (max-width: 991.98px){ 
+           .solutions .tile-row{ min-height: 500px; } 
+           .tile-img{ min-height: 400px; }
+           .tile-inner{ padding: 48px 40px; }
+         }
+         
+         @media (max-width: 767.98px){ 
+           .tile-img{ min-height: 300px; } 
+           .tile-inner{ padding: 40px 32px; }
+           .tile-title { font-size: 1.6rem; }
+           .tile-desc { font-size: 1rem; }
+         }
 
          /* Cabeçalho da seção (titulo melhorado) */
          .section-head { margin: 16px 0 28px; }
@@ -353,6 +561,254 @@
          .partner-logo { height:60px; width:auto; }
          .benefit-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#32373d; }
          .benefit-item i { color:#004E29; margin-top:2px; }
+
+         /* Grid de Serviços */
+         .services-grid {
+           margin-top: 40px;
+         }
+
+         .service-card {
+           background: #ffffff;
+           border: 1px solid #e9ecef;
+           border-radius: 16px;
+           overflow: hidden;
+           box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+           transition: all 0.4s ease;
+           cursor: pointer;
+           height: 100%;
+         }
+
+         .service-card:hover {
+           transform: translateY(-6px);
+           box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+           border-color: #D07400;
+         }
+
+         .service-card-img {
+           position: relative;
+           width: 100%;
+           height: 200px;
+           overflow: hidden;
+         }
+
+         .service-card-img img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transition: transform 0.6s ease;
+         }
+
+         .service-card:hover .service-card-img img {
+           transform: scale(1.05);
+         }
+
+         .service-card-content {
+           padding: 24px;
+           background: #ffffff;
+         }
+
+         .service-card-title {
+           color: #0f1720;
+           font-weight: 700;
+           font-size: 1.5rem;
+           line-height: 1.3;
+           margin-bottom: 12px;
+           font-family: inherit;
+         }
+
+         .service-card-desc {
+           color: #5c6670;
+           font-size: 0.95rem;
+           line-height: 1.6;
+           margin-bottom: 0;
+         }
+
+         .service-card-special {
+           background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
+           border: 2px solid #D07400;
+           color: #fff;
+           box-shadow: 0 8px 32px rgba(208, 116, 0, 0.25);
+         }
+
+         .service-card-special:hover {
+           border-color: #ffd27a;
+           box-shadow: 0 16px 48px rgba(208, 116, 0, 0.35);
+         }
+
+         .service-card-special .service-card-img {
+           height: 250px;
+         }
+
+         .service-card-special .service-card-content {
+           padding: 32px 24px;
+         }
+
+         .service-card-special .service-card-title {
+           color: #ffffff;
+           font-size: 2rem;
+         }
+
+         .service-card-special .service-card-desc {
+           color: rgba(255,255,255,0.95);
+           font-size: 1.05rem;
+         }
+         
+         /* Botões dos serviços */
+         .btn-service-outline {
+           background: transparent;
+           border: 2px solid #D07400;
+           color: #D07400;
+           font-weight: 600;
+           padding: 0.6rem 1.2rem;
+           border-radius: 8px;
+           text-decoration: none;
+           display: inline-block;
+           margin-top: 1rem;
+           transition: all 0.3s ease;
+           font-size: 0.9rem;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
+         }
+         
+         .btn-service-outline:hover {
+           background: #D07400;
+           color: #ffffff;
+           transform: translateY(-2px);
+           box-shadow: 0 6px 20px rgba(208,116,0,0.3);
+           text-decoration: none;
+         }
+         
+         .btn-service-primary {
+           background: #ffffff;
+           border: 2px solid #ffffff;
+           color: #D07400;
+           font-weight: 600;
+           padding: 0.6rem 1.2rem;
+           border-radius: 8px;
+           text-decoration: none;
+           display: inline-block;
+           margin-top: 1rem;
+           transition: all 0.3s ease;
+           font-size: 0.9rem;
+           text-transform: uppercase;
+           letter-spacing: 0.5px;
+         }
+         
+         .btn-service-primary:hover {
+           background: transparent;
+           color: #ffffff;
+           transform: translateY(-2px);
+           box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+           text-decoration: none;
+         }
+
+         @media (max-width: 991.98px) {
+           .service-card-img { height: 180px; }
+           .service-card-special .service-card-img { height: 200px; }
+         }
+
+         @media (max-width: 767.98px) {
+           .service-card-img { height: 160px; }
+           .service-card-title { font-size: 1.3rem; }
+           .service-card-desc { font-size: 0.9rem; }
+           .service-card-special .service-card-title { font-size: 1.7rem; }
+           .service-card-special .service-card-desc { font-size: 0.95rem; }
+         }
+
+         /* Footer */
+         .footer {
+           background-color: #004E29;
+           color: #fff;
+           padding: 80px 0 40px;
+         }
+         .footer-brand {
+           max-width: 250px;
+         }
+         .footer-desc {
+           color: rgba(255, 255, 255, 0.8);
+           font-size: 0.95rem;
+           line-height: 1.7;
+         }
+         .footer-social {
+           margin-top: 30px;
+         }
+         .footer-social-title {
+           font-weight: 600;
+           font-size: 1.1rem;
+           margin-bottom: 15px;
+         }
+         .social-link {
+           color: #fff;
+           font-size: 1.5rem;
+           transition: color 0.3s ease;
+         }
+         .social-link:hover {
+           color: #ffd27a;
+         }
+         .footer-title {
+           font-weight: 700;
+           font-size: 1.3rem;
+           margin-bottom: 20px;
+         }
+         .footer-links li {
+           margin-bottom: 10px;
+         }
+         .footer-links a {
+           color: rgba(255, 255, 255, 0.8);
+           font-size: 0.95rem;
+           transition: color 0.3s ease;
+         }
+         .footer-links a:hover {
+           color: #ffd27a;
+           text-decoration: none;
+         }
+         .footer-contact {
+           margin-top: 30px;
+         }
+         .contact-item {
+           display: flex;
+           align-items: center;
+           margin-bottom: 15px;
+         }
+         .contact-item i {
+           font-size: 1.1rem;
+           margin-right: 10px;
+           color: #ffd27a;
+         }
+         .footer-divider {
+           border-top: 1px solid rgba(255, 255, 255, 0.2);
+         }
+         .footer-copyright {
+           font-size: 0.9rem;
+           color: rgba(255, 255, 255, 0.7);
+         }
+         .footer-legal {
+           font-size: 0.85rem;
+           color: rgba(255, 255, 255, 0.6);
+         }
+         .footer-legal-link {
+           color: rgba(255, 255, 255, 0.8);
+           transition: color 0.3s ease;
+         }
+         .footer-legal-link:hover {
+           color: #ffd27a;
+           text-decoration: none;
+         }
+         
+         /* Responsividade do Footer */
+         @media (max-width: 991.98px) {
+           .footer { padding: 60px 0 30px; }
+           .footer-brand { max-width: 100%; }
+           .footer-social { margin-top: 25px; }
+         }
+         
+         @media (max-width: 767.98px) {
+           .footer { padding: 50px 0 25px; }
+           .footer-title { font-size: 1.2rem; margin-bottom: 15px; }
+           .footer-links li { margin-bottom: 8px; }
+           .footer-legal { flex-direction: column; gap: 15px; align-items: center; }
+           .footer-copyright { text-align: center; }
+         }
     </style>
 </head>
 
@@ -434,60 +890,71 @@
         <h2 class="mb-4">Soluções em destaque</h2>
         <div class="row g-4">
           <div class="col-12 col-sm-6 col-lg-3">
-             <article class="feature-card card">
-               <div class="position-relative">
-                 <img src="img/Capa-BPO-Innova.jpg" class="feature-img" alt="Technology Advisory Solutions - consultoria estratégica em tecnologia" />
-                 <div class="feature-overlay"></div>
-                 <div class="feature-caption">
-                  <h5>Governança de<br/>Serviços Exclusiva</h5>
-                  <p class="mb-2">Modelos de governança e SLA sob medida.</p>
-                   <a href="#" class="feature-link">Saiba mais <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                 </div>
-               </div>
-             </article>
-           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-             <article class="feature-card card">
-               <div class="position-relative">
-                <img src="img/hero2.jpg" class="feature-img" alt="Tecnologia de Ponta e Automação" />
-                 <div class="feature-overlay"></div>
-                 <div class="feature-caption">
-                  <h5>Tecnologia de Ponta e<br/>Automação</h5>
-                  <p class="mb-2">Plataformas modernas e automações que reduzem esforço manual.</p>
-                   <a href="#" class="feature-link">Saiba mais <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                 </div>
-               </div>
-             </article>
-           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-             <article class="feature-card card">
-               <div class="position-relative">
-                <img src="img/ggi.png" class="feature-img" alt="Estrutura Ágil e Alcance Global" />
-                 <div class="feature-overlay"></div>
-                 <div class="feature-caption">
-                  <h5>Estrutura Ágil e<br/>Alcance Global</h5>
-                  <p class="mb-2">Operação flexível com cobertura nacional e internacional.</p>
-                  <a href="#" class="feature-link">Saiba mais <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            <article class="feature-card">
+              <div class="feature-card-bg" style="background-image: url('img/home/governanca-de-servicos-exclusiva.webp');">
+                <div class="feature-card-overlay">
+                  <div class="feature-card-content">
+                    <h5>Governança de<br/>Serviços Exclusiva</h5>
+                    <p>Modelos de governança e SLA sob medida para sua empresa.</p>
+                    <a href="#" class="feature-card-btn">
+                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
+          
           <div class="col-12 col-sm-6 col-lg-3">
-            <article class="feature-card card">
-              <div class="position-relative">
-                <img src="img/Capa-BPO-Innova.jpg" class="feature-img" alt="Expertise Sênior e Atendimento Personalizado" />
-                <div class="feature-overlay"></div>
-                <div class="feature-caption">
-                  <h5>Expertise Sênior e<br/>Atendimento Personalizado</h5>
-                  <p class="mb-2">Consultores experientes próximos ao seu negócio.</p>
-                   <a href="#" class="feature-link">Saiba mais <i class="fa-solid fa-arrow-right ms-1"></i></a>
-                 </div>
-               </div>
-             </article>
-           </div>
-         </div>
-       </div>
-     </section>
+            <article class="feature-card">
+              <div class="feature-card-bg" style="background-image: url('img/home/tecnologia-de-ponta-e-automacao.webp');">
+                <div class="feature-card-overlay">
+                  <div class="feature-card-content">
+                    <h5>Tecnologia de Ponta e<br/>Automação</h5>
+                    <p>Plataformas modernas e automações que reduzem esforço manual.</p>
+                    <a href="#" class="feature-card-btn">
+                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-lg-3">
+            <article class="feature-card">
+              <div class="feature-card-bg" style="background-image: url('img/home/estrutura-agil-e-alcance-global.webp');">
+                <div class="feature-card-overlay">
+                  <div class="feature-card-content">
+                    <h5>Estrutura Ágil e<br/>Alcance Global</h5>
+                    <p>Operação flexível com cobertura nacional e internacional.</p>
+                    <a href="#" class="feature-card-btn">
+                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-lg-3">
+            <article class="feature-card">
+              <div class="feature-card-bg" style="background-image: url('img/home/expertise-senior-e-atendimento-personalizado.webp');">
+                <div class="feature-card-overlay">
+                  <div class="feature-card-content">
+                    <h5>Expertise Sênior e<br/>Atendimento Personalizado</h5>
+                    <p>Consultores experientes próximos ao seu negócio.</p>
+                    <a href="#" class="feature-card-btn">
+                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
      <!-- CTA -->
      <section class="cta-band" style="background-color: #004E29;">
@@ -507,53 +974,112 @@
      </section>
 
      <!-- Produtos e Soluções - Mosaico com imagens (como solicitado pelo cliente) -->
-      <section id="solucoes" class="solutions">
+      <section id="servicos" class="solutions">
        <div class="container-fluid">
          <div class="section-head">
            <div class="section-accent mb-2"></div>
-           <div class="section-kicker">Nossas ofertas</div>
-           <h2 class="section-title">Produtos e Soluções</h2>
+           <div class="section-kicker">Nossos Serviços, seus resultados</div>
+           <h2 class="section-title">Serviços</h2>
            <p class="section-sub">Estratégia, processos e automação para acelerar resultados.</p>
          </div>
-         <div class="row g-0 tile-row align-items-stretch">
-           <!-- 1: Imagem esquerda / Texto direita -->
-           <div class="col-md-6 tile-img reveal-left">
-             <img src="img/Capa-BPO-Innova.jpg" alt="Technology Advisory Solutions" />
-           </div>
-           <div class="col-md-6 tile-text reveal-right">
-             <div class="tile-inner">
-               <h2 class="tile-title mb-2">Technology Advisory Solutions</h2>
-               <p class="tile-desc mb-3">Consultoria estratégica em tecnologia para sustentar o crescimento, reduzir riscos e acelerar a transformação digital.</p>
-               <div class="d-flex gap-2">
-                 <a href="#" class="btn btn-tile-primary">Começar</a>
-                 <a href="#" class="btn btn-tile-outline">Saiba mais</a>
+         
+         <!-- Grid de Serviços -->
+         <div class="services-grid">
+           <div class="row g-4">
+             <!-- Row 1: 3 cards -->
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/contabil.webp" alt="Contábil - Relatórios financeiros e gráficos" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Contábil</h3>
+                   <p class="service-card-desc">Atuamos na área contábil a fim de atender todas normas e obrigações contábeis, apresentando relatórios que auxiliam a gerência na tomada de decisões.</p>
+                   <a href="#contabil" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/fiscal.webp" alt="Fiscal - Gestão tributária e benefícios" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Fiscal</h3>
+                   <p class="service-card-desc">Garantimos que sua empresa tenha o melhor desempenho tributário, monitorando alternativas justas que permitam o aproveitamento dos benefícios que a lei possa garantir.</p>
+                   <a href="#fiscal" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/financeiro.webp" alt="Financeiro - Gestão de recursos e investimentos" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Financeiro</h3>
+                   <p class="service-card-desc">Aprimoramos a gestão financeira de nossos clientes e apresentando de forma clara, as informações necessárias para a otimização da gestão de recursos e investimentos.</p>
+                   <a href="#financeiro" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
+               </div>
+             </div>
+             
+             <!-- Row 2: 3 cards -->
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/folha.webp" alt="Folha - Processamento de pagamentos" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Folha</h3>
+                   <p class="service-card-desc">Processamento de folha de pagamento, e atendimento consultivo diferenciado, em conformidade com o e-Social e demais obrigações.</p>
+                   <a href="#folha" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/tecnologia.webp" alt="Tecnologia - ERP e inteligência artificial" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Tecnologia</h3>
+                   <p class="service-card-desc">Usamos ERP de ponta ou ERP do cliente, ferramentas complementares e inteligência artificial para que nossos clientes tenham informações com confiabilidade e acuracidade.</p>
+                   <a href="#tecnologia" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
+               </div>
+             </div>
+             
+             <div class="col-12 col-md-6 col-lg-4">
+               <div class="service-card">
+                 <div class="service-card-img">
+                   <img src="img/home/paralegal.webp" alt="Paralegal - Processos burocráticos" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title">Paralegal</h3>
+                   <p class="service-card-desc">Nossos serviços de paralegal resolvem os processos burocráticos com maestria, rapidez e precisão, para que sua empresa esteja sempre de acordo com o requerido.</p>
+                   <a href="#paralegal" class="btn btn-service-outline">Saiba mais</a>
+                 </div>
                </div>
              </div>
            </div>
-
-           <!-- 2: Texto esquerda / Imagem direita -->
-           <div class="col-md-6 order-md-0 order-1 tile-text reveal-left">
-             <div class="tile-inner">
-               <div class="tile-accent mb-3"></div>
-               <h2 class="tile-title mb-2">Business Processes Solutions</h2>
-               <p class="tile-desc mb-3">Otimização de processos empresariais com foco em desempenho, governança e escalabilidade operacional.</p>
-               <a href="#" class="btn btn-tile-outline">Saiba mais</a>
-             </div>
-           </div>
-           <div class="col-md-6 order-md-1 order-0 tile-img reveal-right">
-             <img src="img/ggi.png" alt="Business Processes Solutions" />
-           </div>
-
-           <!-- 3: Imagem esquerda / Texto direita -->
-           <div class="col-md-6 order-md-0 tile-img reveal-left">
-             <img src="img/hero2.jpg" alt="Automação" />
-           </div>
-           <div class="col-md-6 order-md-1 tile-text reveal-right">
-             <div class="tile-inner">
-               <div class="tile-accent mb-3"></div>
-               <h2 class="tile-title mb-2">Automação</h2>
-               <p class="tile-desc mb-3">Implementação de ferramentas e integrações para reduzir tarefas manuais, aumentar a produtividade e melhorar a qualidade dos dados.</p>
-               <a href="#" class="btn btn-tile-outline">Saiba mais</a>
+           
+           <!-- Card especial abaixo do grid -->
+           <div class="row mt-5">
+             <div class="col-12 col-lg-8 mx-auto">
+               <div class="service-card service-card-special">
+                 <div class="service-card-img">
+                   <img src="img/home/servicos-especiais.webp" alt="Serviços Especiais - Soluções personalizadas" />
+                 </div>
+                 <div class="service-card-content">
+                   <h3 class="service-card-title text-dark">Serviços Especiais</h3>
+                   <p class="service-card-desc text-dark">Nossos serviços especiais são para necessidades específicas que requerem especialistas de alto nível para solucionar as necessidades.</p>
+                   <a href="#servicos-especiais" class="btn btn-service-primary">Saiba mais</a>
+                 </div>
+               </div>
              </div>
            </div>
          </div>
@@ -561,7 +1087,7 @@
       </section>
 
       <!-- Membro GGI -->
-      <section class="ggi-section">
+      <!--section class="ggi-section">
         <div class="container-fluid">
           <div class="row g-4 align-items-center">
             <div class="col-lg-6">
@@ -586,7 +1112,119 @@
             </div>
           </div>
         </div>
-      </section>
+      </section-->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row g-5">
+            <!-- Coluna 1: Sobre a empresa -->
+            <div class="col-12 col-lg-4">
+              <div class="footer-brand mb-4">
+                <img src="img/logo.png" alt="BPO Innova" height="48" class="mb-3" />
+                <p class="footer-desc">Transformamos seu backoffice em uma vantagem competitiva através de governança de serviços, tecnologia de ponta e expertise sênior.</p>
+              </div>
+              <div class="footer-social">
+                <h6 class="footer-social-title mb-3">Siga-nos</h6>
+                <div class="d-flex gap-3">
+                  <a href="#" class="social-link" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coluna 2: Serviços -->
+            <div class="col-12 col-md-6 col-lg-2">
+              <h5 class="footer-title mb-4">Serviços</h5>
+              <ul class="footer-links">
+                <li><a href="#contabil">Contábil</a></li>
+                <li><a href="#fiscal">Fiscal</a></li>
+                <li><a href="#financeiro">Financeiro</a></li>
+                <li><a href="#folha">Folha</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#paralegal">Paralegal</a></li>
+              </ul>
+            </div>
+
+            <!-- Coluna 3: Empresa -->
+            <div class="col-12 col-md-6 col-lg-2">
+              <h5 class="footer-title mb-4">Empresa</h5>
+              <ul class="footer-links">
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#equipe">Nossa equipe</a></li>
+                <li><a href="#parceiros">Parceiros</a></li>
+                <li><a href="#carreiras">Carreiras</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#imprensa">Imprensa</a></li>
+              </ul>
+            </div>
+
+            <!-- Coluna 4: Suporte e Contato -->
+            <div class="col-12 col-md-6 col-lg-2">
+              <h5 class="footer-title mb-4">Suporte</h5>
+              <ul class="footer-links">
+                <li><a href="#ajuda">Central de ajuda</a></li>
+                <li><a href="#documentacao">Documentação</a></li>
+                <li><a href="#treinamento">Treinamentos</a></li>
+                <li><a href="#status">Status do sistema</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
+            </div>
+
+            <!-- Coluna 5: Contato -->
+            <div class="col-12 col-md-6 col-lg-2">
+              <h5 class="footer-title mb-4">Contato</h5>
+              <div class="footer-contact">
+                <div class="contact-item mb-3">
+                  <i class="fa-solid fa-phone me-2"></i>
+                  <span>+55 (11) 99999-9999</span>
+                </div>
+                <div class="contact-item mb-3">
+                  <i class="fa-solid fa-envelope me-2"></i>
+                  <span>contato@bpoinnova.com.br</span>
+                </div>
+                <div class="contact-item mb-3">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <span>São Paulo, SP - Brasil</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-clock me-2"></i>
+                  <span>Seg-Sex: 8h às 18h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha divisória -->
+          <hr class="footer-divider my-5" />
+
+          <!-- Rodapé inferior -->
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <p class="footer-copyright mb-0">
+                © 2024 BPO Innova. Todos os direitos reservados.
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="footer-legal d-flex gap-4 justify-content-md-end">
+                <a href="#privacidade" class="footer-legal-link">Política de Privacidade</a>
+                <a href="#termos" class="footer-legal-link">Termos de Uso</a>
+                <a href="#cookies" class="footer-legal-link">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
