@@ -2,1092 +2,1641 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BPO Innova</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 72px;
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BPO Innova</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      padding-top: 72px;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
 
-        .dropdown-menu {
-            background-color: #fff;
-            border: 1px solid rgba(0,0,0,.08);
-            border-radius: 12px;
-            padding: 0.75rem 0;
-            box-shadow: 0 8px 32px rgba(0,0,0,.12);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
+    .dropdown-menu {
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, .08);
+      border-radius: 12px;
+      padding: 0.75rem 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
 
-        .dropdown-item {
-            padding: 0.6rem 1.25rem;
-            transition: all 0.2s ease;
-            font-weight: 500;
-        }
+    .dropdown-item {
+      padding: 0.6rem 1.25rem;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
 
-        .dropdown-item:hover {
-            background-color: rgba(208, 116, 0, 0.08);
-            color: #D07400;
-        }
+    .dropdown-item:hover {
+      background-color: rgba(208, 116, 0, 0.08);
+      color: #D07400;
+    }
 
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            padding: 0.75rem 1.25rem;
-            transition: all 0.2s ease;
-            position: relative;
-        }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding: 0.75rem 1.25rem;
+      transition: all 0.2s ease;
+      position: relative;
+    }
 
-        .navbar-nav .nav-link:hover {
-            color: #D07400 !important;
-        }
+    .navbar-nav .nav-link:hover {
+      color: #D07400 !important;
+    }
 
-        .navbar-nav .nav-link.active {
-            color: #D07400 !important;
-            font-weight: 600;
-        }
+    .navbar-nav .nav-link.active {
+      color: #D07400 !important;
+      font-weight: 600;
+    }
 
-        .navbar-nav .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 2px;
-            background: #D07400;
-            border-radius: 1px;
-        }
+    .navbar-nav .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: #D07400;
+      border-radius: 1px;
+    }
 
-        .btn-warning {
-            background: #D07400;
-            border-color: #D07400;
-            color: #fff;
-            font-weight: 600;
-            padding: 0.6rem 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
+    .btn-warning {
+      background: #D07400;
+      border-color: #D07400;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
 
-        .btn-warning:hover {
-            background: #e4810d;
-            border-color: #e4810d;
-            color: #fff;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
-        }
+    .btn-warning:hover {
+      background: #e4810d;
+      border-color: #e4810d;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
+    }
 
-        /* Hero Section */
-        :root {
-            --hero-gold: #D07400;
-        }
+    /* Hero Section */
+    :root {
+      --hero-gold: #D07400;
+    }
 
-        .container-fluid {
-            padding: 0 40px;
-        }
+    .container-fluid {
+      padding: 0 40px;
+    }
 
-        .hero {
-            position: relative;
-            min-height: calc(100vh - 72px);
-            display: flex;
-            align-items: center;
-            color: #fff;
-        }
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
 
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('img/home/pagina inicial imagem 1.webp') center/cover no-repeat;
-            filter: brightness(.75) saturate(1.1) contrast(1.05);
-        }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('img/home/pagina inicial imagem 1.webp') center/cover no-repeat;
+      filter: brightness(.75) saturate(1.1) contrast(1.05);
+    }
 
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 50%, rgba(0,0,0,0) 80%);
-        }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, 0) 80%);
+    }
 
-        .hero-content {
-            position: relative;
-            padding: 6rem 0 2rem;
-            max-width: 980px;
-        }
+    .hero-content {
+      position: relative;
+      padding: 6rem 0 2rem;
+      max-width: 980px;
+    }
 
-        .hero-cta {
-            position: relative;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
+    .hero-cta {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-        .hero-cta .btn {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            padding: 1rem 2.5rem;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            letter-spacing: 0.02em;
-        }
+    .hero-cta .btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
 
-        .hero-cta .btn-cta-primary {
-            background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
-            border: 2px solid #D07400;
-            color: #fff;
-            box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
-        }
+    .hero-cta .btn-cta-primary {
+      background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
+      border: 2px solid #D07400;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
+    }
 
-        .hero-cta .btn-cta-primary:hover {
-            background: linear-gradient(135deg, #e4810d 0%, #f08a1a 100%);
-            border-color: #e4810d;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(208, 116, 0, 0.4);
-        }
+    .hero-cta .btn-cta-primary:hover {
+      background: linear-gradient(135deg, #e4810d 0%, #f08a1a 100%);
+      border-color: #e4810d;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(208, 116, 0, 0.4);
+    }
 
-        .hero-cta .btn-cta-outline {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.7);
-            color: #fff;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
+    .hero-cta .btn-cta-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      color: #fff;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
 
-        .hero-cta .btn-cta-outline:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #fff;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
-        }
+    .hero-cta .btn-cta-outline:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #fff;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25);
+    }
 
-        .hero .kicker {
-            color: var(--hero-gold);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            font-size: .95rem;
-        }
+    .hero .kicker {
+      color: var(--hero-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: .95rem;
+    }
 
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            line-height: 1.2;
-            font-size: clamp(2.5rem, 6vw, 4.2rem);
-            text-shadow: 0 3px 20px rgba(0, 0, 0, .6);
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.01em;
-        }
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      text-shadow: 0 3px 20px rgba(0, 0, 0, .6);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01em;
+    }
 
-        .hero-sub {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, .9);
-            padding-left: 0;
-            max-width: 720px;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, .5);
-            letter-spacing: 0.02em;
-        }
+    .hero-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, .9);
+      padding-left: 0;
+      max-width: 720px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .5);
+      letter-spacing: 0.02em;
+    }
 
-        @media (max-width: 575.98px) {
-            .hero-content {
-                padding: 3rem 0 4rem;
-            }
-        }
+    @media (max-width: 575.98px) {
+      .hero-content {
+        padding: 3rem 0 4rem;
+      }
+    }
 
-        /* Hero Section 2 - 4 Pilares da Excelência */
-        .hero-pilares {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            background: #0e1013;
-        }
+    /* Hero Section 2 - 4 Pilares da Excelência */
+    .hero-pilares {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background: #0e1013;
+    }
 
-        .hero-pilares-bg {
-            position: absolute;
-            inset: 0;
-            background: url('img/home/light-bulb-4297600_1920.webp') center/cover no-repeat;
-            filter: brightness(.85) saturate(1.2) contrast(1.1);
-        }
+    .hero-pilares-bg {
+      position: absolute;
+      inset: 0;
+      background: url('img/home/light-bulb-4297600_1920.webp') center/cover no-repeat;
+      filter: brightness(.85) saturate(1.2) contrast(1.1);
+    }
 
-        .hero-pilares-overlay {
-            position: absolute;
-            inset: 0;
-            background: 
-              linear-gradient(90deg, transparent 0%, rgba(0,0,0,.4) 40%, rgba(0,0,0,.8) 70%),
-              linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.6) 100%);
-        }
+    .hero-pilares-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .4) 40%, rgba(0, 0, 0, .8) 70%),
+        linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .6) 100%);
+    }
 
-        .hero-pilares-content {
-            position: relative;
-            padding: 5rem 0;
-            max-width: 650px;
-            margin-left: auto;
-            text-align: right;
-        }
+    .hero-pilares-content {
+      position: relative;
+      padding: 5rem 0;
+      max-width: 650px;
+      margin-left: auto;
+      text-align: right;
+    }
 
-        .hero-pilares-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-weight: 400;
-            line-height: 0.9;
-            font-size: clamp(2.8rem, 7vw, 4.5rem);
-            text-shadow: 0 3px 20px rgba(0, 0, 0, .7);
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-        }
+    .hero-pilares-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
+      line-height: 0.9;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      text-shadow: 0 3px 20px rgba(0, 0, 0, .7);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
 
-        .hero-pilares-sub {
-            font-family: 'Bebas Neue', sans-serif;
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1.2;
-            color: rgba(255, 255, 255, .95);
-            text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-        }
+    .hero-pilares-sub {
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: rgba(255, 255, 255, .95);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
+      letter-spacing: 0.03em;
+    }
 
-         /* Featured Services (cards com imagem de fundo) */
-         .section-featured { background: #ffffff; padding: 64px 0; }
-         .section-featured h2 { color: var(--hero-gold); font-weight: 700; }
-         
-         .feature-card { 
-           height: 360px; 
-           border-radius: 16px; 
-           overflow: hidden; 
-           box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-           transition: all 0.4s ease;
-           cursor: pointer;
-         }
-         
-         .feature-card:hover { 
-           transform: translateY(-8px);
-           box-shadow: 0 16px 48px rgba(0,0,0,0.2);
-         }
-         
-         .feature-card-bg { 
-           width: 100%; 
-           height: 100%; 
-           background-size: cover; 
-           background-position: center; 
-           background-repeat: no-repeat;
-           position: relative;
-         }
-         
-         .feature-card-overlay { 
-           position: absolute; 
-           inset: 0; 
-           background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.1) 100%);
-           display: flex;
-           align-items: flex-end;
-           padding: 2rem;
-         }
-         
-         .feature-card-content { 
-           color: #fff; 
-           width: 100%;
-         }
-         
-         .feature-card-content h5 { 
-           margin: 0 0 0.75rem; 
-           font-weight: 700; 
-           font-size: 1.25rem;
-           line-height: 1.3;
-           text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-         }
-         
-         .feature-card-content p { 
-           margin: 0 0 1rem; 
-           color: rgba(255,255,255,0.9);
-           font-size: 0.95rem;
-           line-height: 1.5;
-           text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-         }
-         
-         .feature-card-btn { 
-           color: #fff; 
-           text-decoration: none; 
-           font-weight: 600;
-           font-size: 0.9rem;
-           text-transform: uppercase;
-           letter-spacing: 0.5px;
-           padding: 0.5rem 0;
-           border-bottom: 2px solid #D07400;
-           transition: all 0.3s ease;
-           display: inline-block;
-         }
-         
-         .feature-card-btn:hover { 
-           color: #ffd27a; 
-           border-bottom-color: #ffd27a;
-           transform: translateX(4px);
-         }
-         
-         /* Responsividade para os cards */
-         @media (max-width: 991.98px) {
-           .feature-card { height: 320px; }
-           .feature-card-overlay { padding: 1.5rem; }
-         }
-         
-         @media (max-width: 767.98px) {
-           .feature-card { height: 280px; }
-           .feature-card-overlay { padding: 1.25rem; }
-           .feature-card-content h5 { font-size: 1.1rem; }
-           .feature-card-content p { font-size: 0.9rem; }
-         }
+    /* Seção Nossas Soluções, Seus Resultados */
+    .nossas-solucoes-seus-resultados {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
 
-         /* CTA band - visual mais clean e moderno */
-         .cta-band { 
-           position: relative; 
-           background:
-             radial-gradient(65% 50% at 85% 20%, rgba(208,116,0,.25) 0, rgba(208,116,0,0) 60%),
-             radial-gradient(60% 45% at 10% 85%, rgba(0,78,41,.25) 0, rgba(0,78,41,0) 60%),
-             #0e1013; 
-           color:#fff; 
-           padding: 84px 0; 
-         }
-         .cta-title { font-weight:800; line-height:1.15; font-size: clamp(1.8rem, 4vw, 2.6rem); }
-         .cta-desc { color: rgba(255,255,255,.85); max-width: 820px; }
-         .cta-accent { width:56px; height:4px; background:#D07400; border-radius:2px; }
-         .btn-cta-primary { background:#D07400; border-color:#D07400; color:#fff; font-weight:700; padding:.8rem 1.3rem; }
-         .btn-cta-primary:hover{ background:#e4810d; border-color:#e4810d; color:#fff; }
-         .btn-cta-outline { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.6); padding:.8rem 1.3rem; font-weight:700; }
-         .btn-cta-outline:hover{ background:#004E29; border-color:#004E29; color:#fff; }
+    .nossas-solucoes-bg {
+      position: absolute;
+      inset: 0;
+      background: url('img/home/nossas-solucoes-seus-resultados.webp') center/cover no-repeat;
+      filter: brightness(0.85) saturate(1.1) contrast(1.05);
+    }
 
-         /* Produtos e Soluções (mosaico imagem/texto) */
-         .solutions { 
-           background: #ffffff; 
-           padding: 80px 0;
-           position: relative;
-         }
-         
-         .solutions::before {
-           content: '';
-           position: absolute;
-           top: 0;
-           left: 0;
-           right: 0;
-           height: 1px;
-           background: linear-gradient(90deg, transparent, rgba(208,116,0,0.2), transparent);
-         }
-         
-         .solutions .tile-row { 
-           min-height: 560px; 
-           margin: 0;
-         }
-         
-         .tile-img { 
-           position: relative; 
-           min-height: 560px; 
-           overflow: hidden;
-           background: #f8f9fa;
-         }
-         
-         .tile-img > img { 
-           position: absolute; 
-           inset: 0; 
-           width: 100%; 
-           height: 100%; 
-           object-fit: cover; 
-           transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-           filter: brightness(0.95);
-         }
-         
-         .tile-img:hover > img { 
-           transform: scale(1.06); 
-           filter: brightness(1.05);
-         }
-         
-         .tile-overlay {
-           position: absolute;
-           inset: 0;
-           background: linear-gradient(135deg, rgba(208,116,0,0.1) 0%, transparent 100%);
-           opacity: 0;
-           transition: opacity 0.6s ease;
-           z-index: 1;
-         }
-         
-         .tile-img:hover .tile-overlay {
-           opacity: 1;
-         }
-         
-         .tile-text { 
-           background: #f8f9fa; 
-           display: flex; 
-           align-items: center; 
-           box-shadow: 0 8px 32px rgba(0,0,0,0.04);
-           position: relative;
-           transition: all 0.4s ease;
-         }
-         
-         .tile-text:hover {
-           background: #ffffff;
-           box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-         }
-         
-         .tile-inner { 
-           padding: 64px 56px; 
-           max-width: 640px; 
-           width: 100%;
-         }
-         
-         .tile-title { 
-           color: #0f1720; 
-           font-weight: 800; 
-           font-size: clamp(1.8rem, 3vw, 2.2rem);
-           line-height: 1.2;
-           margin-bottom: 1.5rem;
-         }
-         
-         .tile-desc { 
-           color: #5c6670; 
-           font-size: 1.05rem;
-           line-height: 1.7;
-           margin-bottom: 2rem;
-         }
-         
-         .tile-accent { 
-           width: 64px; 
-           height: 4px; 
-           background: linear-gradient(90deg, #D07400, #ffd27a);
-           border-radius: 2px;
-           margin-bottom: 1.5rem;
-         }
-         
-         .btn-tile-primary { 
-           background: #D07400; 
-           border-color: #D07400; 
-           color: #fff; 
-           font-weight: 700;
-           padding: 0.75rem 1.5rem;
-           border-radius: 8px;
-           transition: all 0.3s ease;
-           box-shadow: 0 4px 16px rgba(208,116,0,0.3);
-         }
-         
-         .btn-tile-primary:hover { 
-           background: #004E29; 
-           border-color: #004E29; 
-           color: #fff;
-           transform: translateY(-2px);
-           box-shadow: 0 8px 24px rgba(0,78,41,0.4);
-         }
-         
-         .btn-tile-outline { 
-           border-color: #D07400; 
-           color: #D07400; 
-           font-weight: 700;
-           padding: 0.75rem 1.5rem;
-           border-radius: 8px;
-           transition: all 0.3s ease;
-           border-width: 2px;
-         }
-         
-         .btn-tile-outline:hover { 
-           background: #D07400; 
-           color: #fff;
-           transform: translateY(-2px);
-           box-shadow: 0 8px 24px rgba(208,116,0,0.3);
-         }
-         /* Animações sutis */
-         .reveal-left{ opacity:0; transform:translateX(-14px); animation:reveal .7s ease .1s forwards; }
-         .reveal-right{ opacity:0; transform:translateX(14px); animation:reveal .7s ease .1s forwards; }
-         @keyframes reveal{ to{ opacity:1; transform:none; } }
-         
-         /* Responsividade para Produtos e Soluções */
-         @media (max-width: 991.98px){ 
-           .solutions .tile-row{ min-height: 500px; } 
-           .tile-img{ min-height: 400px; }
-           .tile-inner{ padding: 48px 40px; }
-         }
-         
-         @media (max-width: 767.98px){ 
-           .tile-img{ min-height: 300px; } 
-           .tile-inner{ padding: 40px 32px; }
-           .tile-title { font-size: 1.6rem; }
-           .tile-desc { font-size: 1rem; }
-         }
+    .nossas-solucoes-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.4) 100%);
+    }
 
-         /* Cabeçalho da seção (titulo melhorado) */
-         .section-head { margin: 16px 0 28px; }
-         .section-accent { width:64px; height:4px; background:#D07400; border-radius:2px; }
-         .section-kicker { color:#D07400; font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.9rem; margin-top:.5rem; }
-         .section-title { color:#004E29; font-weight:800; margin:.25rem 0; font-size: clamp(1.6rem, 3vw, 2.2rem); }
-         .section-sub { color:#6c757d; max-width: 820px; }
+    .nossas-solucoes-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      width: 100%;
+    }
 
-         /* Seção GGI */
-         .ggi-section { 
-           position: relative;
-           padding:84px 0; 
-           background:
-             radial-gradient(60% 50% at 85% 15%, rgba(208,116,0,.28) 0, rgba(208,116,0,0) 60%),
-             radial-gradient(55% 45% at 10% 85%, rgba(255,255,255,.18) 0, rgba(255,255,255,0) 60%),
-             #004E29;
-           color:#fff;
-           border-top: none;
-         }
-         .ggi-section .text-muted{ color: rgba(255,255,255,.85) !important; }
-         .ggi-section .section-title{ color:#fff; }
-         .ggi-section .section-kicker{ color:#ffd27a; }
-         .ggi-section .section-accent{ background:#ffd27a; }
-         .ggi-card { 
-           background: rgba(255,255,255,.06); 
-           border-color: rgba(255,255,255,.18); 
-           color:#fff;
-           box-shadow: 0 16px 40px rgba(0,0,0,.25);
-           backdrop-filter: blur(6px);
-           -webkit-backdrop-filter: blur(6px);
-         }
-         .benefit-item{ color: rgba(255,255,255,.92); }
-         .benefit-item i{ color:#ffd27a; }
-         .partner-logo{ height:72px; }
-         .logo-badge{ display:inline-flex; align-items:center; justify-content:center; background:#ffffff; border:1px solid #e6eaee; border-radius:14px; padding:18px 22px; box-shadow:0 10px 26px rgba(0,0,0,.18); }
-         .logo-badge .partner-logo{ height:64px; filter:none; }
-         .logo-caption{ color: rgba(255,255,255,.80) !important; }
-         .ggi-card { background:#f6f8fb; border:1px solid #eceff3; border-radius:16px; padding:32px; height:100%; }
-         .partner-logo { height:60px; width:auto; }
-         .benefit-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#32373d; }
-         .benefit-item i { color:#004E29; margin-top:2px; }
+    .nossas-solucoes-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.1;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
 
-         /* Grid de Serviços */
-         .services-grid {
-           margin-top: 40px;
-         }
+    @media (max-width: 767.98px) {
+      .nossas-solucoes-seus-resultados {
+        height: 100vh;
+      }
 
-         .service-card {
-           background: #ffffff;
-           border: 1px solid #e9ecef;
-           border-radius: 16px;
-           overflow: hidden;
-           box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-           transition: all 0.4s ease;
-           cursor: pointer;
-           height: 100%;
-         }
+      .nossas-solucoes-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+    }
 
-         .service-card:hover {
-           transform: translateY(-6px);
-           box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-           border-color: #D07400;
-         }
+    /* Featured Services (cards tradicionais) */
+    .section-featured {
+      background: #ffffff;
+      padding: 64px 0;
+    }
 
-         .service-card-img {
-           position: relative;
-           width: 100%;
-           height: 200px;
-           overflow: hidden;
-         }
+    .section-featured h2 {
+      color: var(--hero-gold);
+      font-weight: 700;
+    }
 
-         .service-card-img img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           transition: transform 0.6s ease;
-         }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      height: 100%;
+    }
 
-         .service-card:hover .service-card-img img {
-           transform: scale(1.05);
-         }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+      border-color: #D07400;
+    }
 
-         .service-card-content {
-           padding: 24px;
-           background: #ffffff;
-         }
+    .feature-card-content {
+      padding: 24px;
+      color: #0f1720;
+    }
 
-         .service-card-title {
-           color: #0f1720;
-           font-weight: 700;
-           font-size: 1.5rem;
-           line-height: 1.3;
-           margin-bottom: 12px;
-           font-family: inherit;
-         }
+    .feature-card-title {
+      color: #0f1720;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-         .service-card-desc {
-           color: #5c6670;
-           font-size: 0.95rem;
-           line-height: 1.6;
-           margin-bottom: 0;
-         }
+    .feature-card-img {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
 
-         .service-card-special {
-           background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
-           border: 2px solid #D07400;
-           color: #fff;
-           box-shadow: 0 8px 32px rgba(208, 116, 0, 0.25);
-         }
+    .feature-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
 
-         .service-card-special:hover {
-           border-color: #ffd27a;
-           box-shadow: 0 16px 48px rgba(208, 116, 0, 0.35);
-         }
+    .feature-card:hover .feature-card-img img {
+      transform: scale(1.05);
+    }
 
-         .service-card-special .service-card-img {
-           height: 250px;
-         }
+    .feature-card-subtitle {
+      color: #D07400;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
 
-         .service-card-special .service-card-content {
-           padding: 32px 24px;
-         }
+    .feature-card-desc {
+      color: #5c6670;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-         .service-card-special .service-card-title {
-           color: #ffffff;
-           font-size: 2rem;
-         }
+    .feature-card-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid #D07400;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
 
-         .service-card-special .service-card-desc {
-           color: rgba(255,255,255,0.95);
-           font-size: 1.05rem;
-         }
-         
-         /* Botões dos serviços */
-         .btn-service-outline {
-           background: transparent;
-           border: 2px solid #D07400;
-           color: #D07400;
-           font-weight: 600;
-           padding: 0.6rem 1.2rem;
-           border-radius: 8px;
-           text-decoration: none;
-           display: inline-block;
-           margin-top: 1rem;
-           transition: all 0.3s ease;
-           font-size: 0.9rem;
-           text-transform: uppercase;
-           letter-spacing: 0.5px;
-         }
-         
-         .btn-service-outline:hover {
-           background: #D07400;
-           color: #ffffff;
-           transform: translateY(-2px);
-           box-shadow: 0 6px 20px rgba(208,116,0,0.3);
-           text-decoration: none;
-         }
-         
-         .btn-service-primary {
-           background: #ffffff;
-           border: 2px solid #ffffff;
-           color: #D07400;
-           font-weight: 600;
-           padding: 0.6rem 1.2rem;
-           border-radius: 8px;
-           text-decoration: none;
-           display: inline-block;
-           margin-top: 1rem;
-           transition: all 0.3s ease;
-           font-size: 0.9rem;
-           text-transform: uppercase;
-           letter-spacing: 0.5px;
-         }
-         
-         .btn-service-primary:hover {
-           background: transparent;
-           color: #ffffff;
-           transform: translateY(-2px);
-           box-shadow: 0 6px 20px rgba(255,255,255,0.2);
-           text-decoration: none;
-         }
+    .feature-card-btn:hover {
+      color: #ffd27a;
+      border-bottom-color: #ffd27a;
+      transform: translateX(4px);
+    }
 
-         @media (max-width: 991.98px) {
-           .service-card-img { height: 180px; }
-           .service-card-special .service-card-img { height: 200px; }
-         }
+    /* Responsividade para os cards */
+    @media (max-width: 991.98px) {
+      .feature-card-img {
+        height: 160px;
+      }
 
-         @media (max-width: 767.98px) {
-           .service-card-img { height: 160px; }
-           .service-card-title { font-size: 1.3rem; }
-           .service-card-desc { font-size: 0.9rem; }
-           .service-card-special .service-card-title { font-size: 1.7rem; }
-           .service-card-special .service-card-desc { font-size: 0.95rem; }
-         }
+      .feature-card-content {
+        padding: 20px;
+      }
+    }
 
-         /* Footer */
-         .footer {
-           background-color: #004E29;
-           color: #fff;
-           padding: 80px 0 40px;
-         }
-         .footer-brand {
-           max-width: 250px;
-         }
-         .footer-desc {
-           color: rgba(255, 255, 255, 0.8);
-           font-size: 0.95rem;
-           line-height: 1.7;
-         }
-         .footer-social {
-           margin-top: 30px;
-         }
-         .footer-social-title {
-           font-weight: 600;
-           font-size: 1.1rem;
-           margin-bottom: 15px;
-         }
-         .social-link {
-           color: #fff;
-           font-size: 1.5rem;
-           transition: color 0.3s ease;
-         }
-         .social-link:hover {
-           color: #ffd27a;
-         }
-         .footer-title {
-           font-weight: 700;
-           font-size: 1.3rem;
-           margin-bottom: 20px;
-         }
-         .footer-links li {
-           margin-bottom: 10px;
-         }
-         .footer-links a {
-           color: rgba(255, 255, 255, 0.8);
-           font-size: 0.95rem;
-           transition: color 0.3s ease;
-         }
-         .footer-links a:hover {
-           color: #ffd27a;
-           text-decoration: none;
-         }
-         .footer-contact {
-           margin-top: 30px;
-         }
-         .contact-item {
-           display: flex;
-           align-items: center;
-           margin-bottom: 15px;
-         }
-         .contact-item i {
-           font-size: 1.1rem;
-           margin-right: 10px;
-           color: #ffd27a;
-         }
-         .footer-divider {
-           border-top: 1px solid rgba(255, 255, 255, 0.2);
-         }
-         .footer-copyright {
-           font-size: 0.9rem;
-           color: rgba(255, 255, 255, 0.7);
-         }
-         .footer-legal {
-           font-size: 0.85rem;
-           color: rgba(255, 255, 255, 0.6);
-         }
-         .footer-legal-link {
-           color: rgba(255, 255, 255, 0.8);
-           transition: color 0.3s ease;
-         }
-         .footer-legal-link:hover {
-           color: #ffd27a;
-           text-decoration: none;
-         }
-         
-         /* Responsividade do Footer */
-         @media (max-width: 991.98px) {
-           .footer { padding: 60px 0 30px; }
-           .footer-brand { max-width: 100%; }
-           .footer-social { margin-top: 25px; }
-         }
-         
-         @media (max-width: 767.98px) {
-           .footer { padding: 50px 0 25px; }
-           .footer-title { font-size: 1.2rem; margin-bottom: 15px; }
-           .footer-links li { margin-bottom: 8px; }
-           .footer-legal { flex-direction: column; gap: 15px; align-items: center; }
-           .footer-copyright { text-align: center; }
-         }
-    </style>
+    @media (max-width: 767.98px) {
+      .feature-card-img {
+        height: 140px;
+      }
+
+      .feature-card-content {
+        padding: 18px;
+      }
+
+      .feature-card-title {
+        font-size: 1.1rem;
+      }
+
+      .feature-card-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .feature-card-desc {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* CTA band - visual mais clean e moderno */
+    .cta-band {
+      position: relative;
+      background:
+        radial-gradient(65% 50% at 85% 20%, rgba(208, 116, 0, .25) 0, rgba(208, 116, 0, 0) 60%),
+        radial-gradient(60% 45% at 10% 85%, rgba(0, 78, 41, .25) 0, rgba(0, 78, 41, 0) 60%),
+        #0e1013;
+      color: #fff;
+      padding: 84px 0;
+    }
+
+    .cta-title {
+      font-weight: 800;
+      line-height: 1.15;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+    }
+
+    .cta-desc {
+      color: rgba(255, 255, 255, .85);
+      max-width: 820px;
+    }
+
+    .cta-accent {
+      width: 56px;
+      height: 4px;
+      background: #D07400;
+      border-radius: 2px;
+    }
+
+    .btn-cta-primary {
+      background: #D07400;
+      border-color: #D07400;
+      color: #fff;
+      font-weight: 700;
+      padding: .8rem 1.3rem;
+    }
+
+    .btn-cta-primary:hover {
+      background: #e4810d;
+      border-color: #e4810d;
+      color: #fff;
+    }
+
+    .btn-cta-outline {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, .6);
+      padding: .8rem 1.3rem;
+      font-weight: 700;
+    }
+
+    .btn-cta-outline:hover {
+      background: #004E29;
+      border-color: #004E29;
+      color: #fff;
+    }
+
+    /* Produtos e Soluções (mosaico imagem/texto) */
+    .solutions {
+      background: #ffffff;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .solutions::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(208, 116, 0, 0.2), transparent);
+    }
+
+    .solutions .tile-row {
+      min-height: 560px;
+      margin: 0;
+    }
+
+    .tile-img {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      background: #f8f9fa;
+    }
+
+    .tile-img>img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: brightness(0.95);
+    }
+
+    .tile-img:hover>img {
+      transform: scale(1.06);
+      filter: brightness(1.05);
+    }
+
+    .tile-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(208, 116, 0, 0.1) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      z-index: 1;
+    }
+
+    .tile-img:hover .tile-overlay {
+      opacity: 1;
+    }
+
+    .tile-text {
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .tile-text:hover {
+      background: #ffffff;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .tile-inner {
+      padding: 64px 56px;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    .tile-title {
+      color: #0f1720;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .tile-desc {
+      color: #5c6670;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .tile-accent {
+      width: 64px;
+      height: 4px;
+      background: linear-gradient(90deg, #D07400, #ffd27a);
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-tile-primary {
+      background: #D07400;
+      border-color: #D07400;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
+    }
+
+    .btn-tile-primary:hover {
+      background: #004E29;
+      border-color: #004E29;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 78, 41, 0.4);
+    }
+
+    .btn-tile-outline {
+      border-color: #D07400;
+      color: #D07400;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border-width: 2px;
+    }
+
+    .btn-tile-outline:hover {
+      background: #D07400;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(208, 116, 0, 0.3);
+    }
+
+    /* Animações sutis */
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-14px);
+      animation: reveal .7s ease .1s forwards;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(14px);
+      animation: reveal .7s ease .1s forwards;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Responsividade para Produtos e Soluções */
+    @media (max-width: 991.98px) {
+      .solutions .tile-row {
+        min-height: 500px;
+      }
+
+      .tile-img {
+        min-height: 400px;
+      }
+
+      .tile-inner {
+        padding: 48px 40px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .tile-img {
+        min-height: 300px;
+      }
+
+      .tile-inner {
+        padding: 40px 32px;
+      }
+
+      .tile-title {
+        font-size: 1.6rem;
+      }
+
+      .tile-desc {
+        font-size: 1rem;
+      }
+    }
+
+    /* Cabeçalho da seção (titulo melhorado) */
+    .section-head {
+      margin: 16px 0 28px;
+    }
+
+    .section-accent {
+      width: 64px;
+      height: 4px;
+      background: #D07400;
+      border-radius: 2px;
+    }
+
+    .section-kicker {
+      color: #D07400;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: .9rem;
+      margin-top: .5rem;
+    }
+
+    .section-title {
+      color: #004E29;
+      font-weight: 800;
+      margin: .25rem 0;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .section-sub {
+      color: #6c757d;
+      max-width: 820px;
+    }
+
+    /* Seção GGI */
+    .ggi-section {
+      position: relative;
+      padding: 84px 0;
+      background:
+        radial-gradient(60% 50% at 85% 15%, rgba(208, 116, 0, .28) 0, rgba(208, 116, 0, 0) 60%),
+        radial-gradient(55% 45% at 10% 85%, rgba(255, 255, 255, .18) 0, rgba(255, 255, 255, 0) 60%),
+        #004E29;
+      color: #fff;
+      border-top: none;
+    }
+
+    .ggi-section .text-muted {
+      color: rgba(255, 255, 255, .85) !important;
+    }
+
+    .ggi-section .section-title {
+      color: #fff;
+    }
+
+    .ggi-section .section-kicker {
+      color: #ffd27a;
+    }
+
+    .ggi-section .section-accent {
+      background: #ffd27a;
+    }
+
+    .ggi-card {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .18);
+      color: #fff;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .25);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .benefit-item {
+      color: rgba(255, 255, 255, .92);
+    }
+
+    .benefit-item i {
+      color: #ffd27a;
+    }
+
+    .partner-logo {
+      height: 72px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #e6eaee;
+      border-radius: 14px;
+      padding: 18px 22px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .18);
+    }
+
+    .logo-badge .partner-logo {
+      height: 64px;
+      filter: none;
+    }
+
+    .logo-caption {
+      color: rgba(255, 255, 255, .80) !important;
+    }
+
+    .ggi-card {
+      background: #f6f8fb;
+      border: 1px solid #eceff3;
+      border-radius: 16px;
+      padding: 32px;
+      height: 100%;
+    }
+
+    .partner-logo {
+      height: 60px;
+      width: auto;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      color: #32373d;
+    }
+
+    .benefit-item i {
+      color: #004E29;
+      margin-top: 2px;
+    }
+
+    /* Grid de Serviços */
+    .services-grid {
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      border-color: #D07400;
+    }
+
+    .service-card-img {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-img img {
+      transform: scale(1.05);
+    }
+
+    .service-card-content {
+      padding: 24px;
+      background: #ffffff;
+    }
+
+    .service-card-title {
+      color: #0f1720;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      font-family: inherit;
+    }
+
+    .service-card-desc {
+      color: #5c6670;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .service-card-special {
+      background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
+      border: 2px solid #D07400;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(208, 116, 0, 0.25);
+    }
+
+    .service-card-special:hover {
+      border-color: #ffd27a;
+      box-shadow: 0 16px 48px rgba(208, 116, 0, 0.35);
+    }
+
+    .service-card-special .service-card-img {
+      height: 250px;
+    }
+
+    .service-card-special .service-card-content {
+      padding: 32px 24px;
+    }
+
+    .service-card-special .service-card-title {
+      color: #ffffff;
+      font-size: 2rem;
+    }
+
+    .service-card-special .service-card-desc {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1.05rem;
+    }
+
+    /* Botões dos serviços */
+    .btn-service-outline {
+      background: transparent;
+      border: 2px solid #D07400;
+      color: #D07400;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-service-outline:hover {
+      background: #D07400;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(208, 116, 0, 0.3);
+      text-decoration: none;
+    }
+
+    .btn-service-primary {
+      background: #ffffff;
+      border: 2px solid #ffffff;
+      color: #D07400;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-service-primary:hover {
+      background: transparent;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+    }
+
+    @media (max-width: 991.98px) {
+      .service-card-img {
+        height: 180px;
+      }
+
+      .service-card-special .service-card-img {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .service-card-img {
+        height: 160px;
+      }
+
+      .service-card-title {
+        font-size: 1.3rem;
+      }
+
+      .service-card-desc {
+        font-size: 0.9rem;
+      }
+
+      .service-card-special .service-card-title {
+        font-size: 1.7rem;
+      }
+
+      .service-card-special .service-card-desc {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Footer Melhorado */
+    .footer {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      color: #2c3e50;
+      padding: 60px 0 30px;
+      border-top: 4px solid #D07400;
+      position: relative;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(208, 116, 0, 0.3), transparent);
+    }
+
+    .footer-brand {
+      max-width: 100%;
+    }
+
+    .footer-logo-section {
+      position: relative;
+    }
+
+    .footer-logo {
+      height: 76px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .footer-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #004E29 0%, #006341 100%);
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0, 78, 41, 0.3);
+    }
+
+    .footer-desc {
+      color: #5c6670;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .footer-desc-main {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .footer-desc-detail {
+      margin-bottom: 0;
+    }
+
+    .footer-desc-detail strong {
+      color: #004E29;
+      font-weight: 700;
+    }
+
+    .footer-section {
+      position: relative;
+    }
+
+    .footer-title {
+      color: #2c3e50;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: linear-gradient(90deg, #D07400, #ffd27a);
+      border-radius: 2px;
+    }
+
+    .footer-title-icon {
+      color: #D07400;
+      font-size: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .footer-links a {
+      color: #5c6670;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      border-radius: 6px;
+      padding-left: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #D07400;
+      background: rgba(208, 116, 0, 0.08);
+      transform: translateX(4px);
+    }
+
+    .link-arrow {
+      color: #D07400;
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-links a:hover .link-arrow {
+      transform: translateX(3px);
+    }
+
+    .footer-contact {
+      margin-top: 0;
+    }
+
+    .contact-item {
+      margin-bottom: 18px;
+      transition: all 0.3s ease;
+      padding: 6px 0;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .social-link-linkedin {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #0077b5;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 16px 20px;
+      background: rgba(0, 119, 181, 0.08);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 119, 181, 0.2);
+      margin-bottom: 10px;
+    }
+
+    .social-link-linkedin:hover {
+      color: #005885;
+      background: rgba(0, 119, 181, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
+    }
+
+    .social-text {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .contact-icon-wrapper {
+      width: 45px;
+      height: 45px;
+      background: #D07400;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      box-shadow: 0 2px 8px rgba(208, 116, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .contact-icon-wrapper i {
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-label {
+      color: #6c757d;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      color: #2c3e50;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    .footer-divider {
+      margin: 40px 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .divider-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e9ecef, transparent);
+      flex: 1;
+    }
+
+    .divider-accent {
+      width: 8px;
+      height: 8px;
+      background: #D07400;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(208, 116, 0, 0.1);
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .footer-copyright {
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .footer-legal {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: flex-end;
+    }
+
+    .footer-legal-link {
+      color: #5c6670;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .footer-legal-link:hover {
+      color: #D07400;
+    }
+
+    .footer-legal-separator {
+      color: #dee2e6;
+      font-weight: 300;
+    }
+
+    /* Responsividade do Footer */
+    @media (max-width: 991.98px) {
+      .footer {
+        padding: 60px 0 25px;
+      }
+
+      .footer-divider {
+        margin: 40px 0 30px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .footer {
+        padding: 50px 0 20px;
+      }
+
+      .footer-title {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-logo {
+        height: 48px;
+      }
+
+      .footer-legal {
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .footer-copyright {
+        text-align: center;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .contact-icon-wrapper {
+        margin-bottom: 12px;
+        margin-right: 0;
+        width: 40px;
+        height: 40px;
+      }
+
+      .social-link-linkedin {
+        padding: 14px 18px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <img src="img/logo.png" alt="BPO Innova" height="48" class="d-inline-block" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary"
-                aria-controls="navbarPrimary" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo.png" alt="BPO Innova" height="48" class="d-inline-block" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary"
+        aria-controls="navbarPrimary" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarPrimary">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Página Inicial</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#solucoes">Soluções</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+        <div class="d-flex ms-lg-3">
+          <a href="#contato" class="btn btn-warning">Solicite uma Proposta</a>
+          <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-globe"></i> Idioma
             </button>
-            <div class="collapse navbar-collapse" id="navbarPrimary">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#solucoes">Soluções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-                <div class="d-flex ms-lg-3">
-                    <a href="#contato" class="btn btn-warning">Solicite uma Proposta</a>
-                    <div class="dropdown">
-                        <button class="btn btn-link dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-globe"></i> Idioma
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">🇧🇷 Português</a></li>
-                            <li><a class="dropdown-item" href="#">🇺🇸 Inglês</a></li>
-                            <li><a class="dropdown-item" href="#">🇪🇸 Espanhol</a></li>
-                            <li><a class="dropdown-item" href="#">🇫🇷 Francês</a></li>
-                            <li><a class="dropdown-item" href="#">🇩🇪 Alemão</a></li>
-                            <li><a class="dropdown-item" href="#">🇮🇹 Italiano</a></li>
-                            <li><a class="dropdown-item" href="#">🇯🇵 Japonês</a></li>
-                            <li><a class="dropdown-item" href="#">🇰🇷 Coreano</a></li>
-                            <li><a class="dropdown-item" href="#">🇨🇳 Mandarim</a></li>
-                            <li><a class="dropdown-item" href="#">🇮🇳 Hindi</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-bg" role="img" aria-label="Capa com visual moderno e abstrato"></div>
-        <div class="hero-overlay"></div>
-        <div class="container-fluid">
-            <div class="hero-content">
-                <h1 class="hero-title mb-3">Sua contabilidade finalmente se tornou uma vantagem competitiva.</h1>
-                <p class="hero-sub">Integramos governança de serviços, tecnologia de ponta e expertise sênior para transformar seu backoffice em um motor de crescimento. Chega de burocracia, olá performance.</p>
-            </div>
-            <div class="hero-cta">
-                <a href="#contato" class="btn btn-cta-primary">Solicite uma Proposta</a>
-                <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Section 2 - 4 Pilares da Excelência -->
-    <section id="hero-pilares" class="hero-pilares">
-        <div class="hero-pilares-bg" role="img" aria-label="Lâmpada acesa simbolizando inovação e ideias"></div>
-        <div class="hero-pilares-overlay"></div>
-        <div class="container-fluid">
-            <div class="hero-pilares-content">
-                <h2 class="hero-pilares-title mb-3">A Inteligência por Trás da Performance</h2>
-                <p class="hero-pilares-sub">Os 4 Pilares da Excelência BPO INNOVA</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços em Destaque -->
-    <section class="section-featured">
-      <div class="container-fluid">
-        <h2 class="mb-4">Soluções em destaque</h2>
-        <div class="row g-4">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="feature-card">
-              <div class="feature-card-bg" style="background-image: url('img/home/governanca-de-servicos-exclusiva.webp');">
-                <div class="feature-card-overlay">
-                  <div class="feature-card-content">
-                    <h5>Governança de<br/>Serviços Exclusiva</h5>
-                    <p>Modelos de governança e SLA sob medida para sua empresa.</p>
-                    <a href="#" class="feature-card-btn">
-                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="feature-card">
-              <div class="feature-card-bg" style="background-image: url('img/home/tecnologia-de-ponta-e-automacao.webp');">
-                <div class="feature-card-overlay">
-                  <div class="feature-card-content">
-                    <h5>Tecnologia de Ponta e<br/>Automação</h5>
-                    <p>Plataformas modernas e automações que reduzem esforço manual.</p>
-                    <a href="#" class="feature-card-btn">
-                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="feature-card">
-              <div class="feature-card-bg" style="background-image: url('img/home/estrutura-agil-e-alcance-global.webp');">
-                <div class="feature-card-overlay">
-                  <div class="feature-card-content">
-                    <h5>Estrutura Ágil e<br/>Alcance Global</h5>
-                    <p>Operação flexível com cobertura nacional e internacional.</p>
-                    <a href="#" class="feature-card-btn">
-                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="feature-card">
-              <div class="feature-card-bg" style="background-image: url('img/home/expertise-senior-e-atendimento-personalizado.webp');">
-                <div class="feature-card-overlay">
-                  <div class="feature-card-content">
-                    <h5>Expertise Sênior e<br/>Atendimento Personalizado</h5>
-                    <p>Consultores experientes próximos ao seu negócio.</p>
-                    <a href="#" class="feature-card-btn">
-                      Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">🇧🇷 Português</a></li>
+              <li><a class="dropdown-item" href="#">🇺🇸 Inglês</a></li>
+              <li><a class="dropdown-item" href="#">🇪🇸 Espanhol</a></li>
+              <li><a class="dropdown-item" href="#">🇫🇷 Francês</a></li>
+              <li><a class="dropdown-item" href="#">🇩🇪 Alemão</a></li>
+              <li><a class="dropdown-item" href="#">🇮🇹 Italiano</a></li>
+              <li><a class="dropdown-item" href="#">🇯🇵 Japonês</a></li>
+              <li><a class="dropdown-item" href="#">🇰🇷 Coreano</a></li>
+              <li><a class="dropdown-item" href="#">🇨🇳 Mandarim</a></li>
+              <li><a class="dropdown-item" href="#">🇮🇳 Hindi</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </nav>
 
-     <!-- CTA -->
-     <section class="cta-band" style="background-color: #004E29;">
-       <div class="container-fluid">
-         <div class="row align-items-center g-4">
-           <div class="col-lg-8">
-             <div class="cta-accent mb-3"></div>
-             <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
-             <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa equipe prepara uma proposta sob medida para a sua realidade.</p>
-           </div>
-           <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
-             <a href="#contato" class="btn btn-cta-primary">Entre em Contato</a>
-             <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
-           </div>
-         </div>
-       </div>
-     </section>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" role="img" aria-label="Capa com visual moderno e abstrato"></div>
+    <div class="hero-overlay"></div>
+    <div class="container-fluid">
+      <div class="hero-content">
+        <h1 class="hero-title mb-3">Sua contabilidade finalmente se tornou uma vantagem competitiva.</h1>
+        <p class="hero-sub">Integramos governança de serviços, tecnologia de ponta e expertise sênior para transformar
+          seu backoffice em um motor de crescimento. Chega de burocracia, olá performance.</p>
+      </div>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-cta-primary">Solicite uma Proposta</a>
+        <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
+      </div>
+    </div>
+  </section>
 
-     <!-- Produtos e Soluções - Mosaico com imagens (como solicitado pelo cliente) -->
-      <section id="servicos" class="solutions">
-       <div class="container-fluid">
-         <div class="section-head">
-           <div class="section-accent mb-2"></div>
-           <div class="section-kicker">Nossos Serviços, seus resultados</div>
-           <h2 class="section-title">Serviços</h2>
-           <p class="section-sub">Estratégia, processos e automação para acelerar resultados.</p>
-         </div>
-         
-         <!-- Grid de Serviços -->
-         <div class="services-grid">
-           <div class="row g-4">
-             <!-- Row 1: 3 cards -->
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/contabil.webp" alt="Contábil - Relatórios financeiros e gráficos" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Contábil</h3>
-                   <p class="service-card-desc">Atuamos na área contábil a fim de atender todas normas e obrigações contábeis, apresentando relatórios que auxiliam a gerência na tomada de decisões.</p>
-                   <a href="#contabil" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-             
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/fiscal.webp" alt="Fiscal - Gestão tributária e benefícios" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Fiscal</h3>
-                   <p class="service-card-desc">Garantimos que sua empresa tenha o melhor desempenho tributário, monitorando alternativas justas que permitam o aproveitamento dos benefícios que a lei possa garantir.</p>
-                   <a href="#fiscal" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-             
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/financeiro.webp" alt="Financeiro - Gestão de recursos e investimentos" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Financeiro</h3>
-                   <p class="service-card-desc">Aprimoramos a gestão financeira de nossos clientes e apresentando de forma clara, as informações necessárias para a otimização da gestão de recursos e investimentos.</p>
-                   <a href="#financeiro" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-             
-             <!-- Row 2: 3 cards -->
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/folha.webp" alt="Folha - Processamento de pagamentos" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Folha</h3>
-                   <p class="service-card-desc">Processamento de folha de pagamento, e atendimento consultivo diferenciado, em conformidade com o e-Social e demais obrigações.</p>
-                   <a href="#folha" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-             
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/tecnologia.webp" alt="Tecnologia - ERP e inteligência artificial" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Tecnologia</h3>
-                   <p class="service-card-desc">Usamos ERP de ponta ou ERP do cliente, ferramentas complementares e inteligência artificial para que nossos clientes tenham informações com confiabilidade e acuracidade.</p>
-                   <a href="#tecnologia" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-             
-             <div class="col-12 col-md-6 col-lg-4">
-               <div class="service-card">
-                 <div class="service-card-img">
-                   <img src="img/home/paralegal.webp" alt="Paralegal - Processos burocráticos" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title">Paralegal</h3>
-                   <p class="service-card-desc">Nossos serviços de paralegal resolvem os processos burocráticos com maestria, rapidez e precisão, para que sua empresa esteja sempre de acordo com o requerido.</p>
-                   <a href="#paralegal" class="btn btn-service-outline">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-           </div>
-           
-           <!-- Card especial abaixo do grid -->
-           <div class="row mt-5">
-             <div class="col-12 col-lg-8 mx-auto">
-               <div class="service-card service-card-special">
-                 <div class="service-card-img">
-                   <img src="img/home/servicos-especiais.webp" alt="Serviços Especiais - Soluções personalizadas" />
-                 </div>
-                 <div class="service-card-content">
-                   <h3 class="service-card-title text-dark">Serviços Especiais</h3>
-                   <p class="service-card-desc text-dark">Nossos serviços especiais são para necessidades específicas que requerem especialistas de alto nível para solucionar as necessidades.</p>
-                   <a href="#servicos-especiais" class="btn btn-service-primary">Saiba mais</a>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-      </section>
+  <!-- Hero Section 2 - 4 Pilares da Excelência -->
+  <section id="hero-pilares" class="hero-pilares">
+    <div class="hero-pilares-bg" role="img" aria-label="Lâmpada acesa simbolizando inovação e ideias"></div>
+    <div class="hero-pilares-overlay"></div>
+    <div class="container-fluid">
+      <div class="hero-pilares-content">
+        <h2 class="hero-pilares-title mb-3">A Inteligência por Trás da Performance</h2>
+        <p class="hero-pilares-sub">Os 4 Pilares da Excelência BPO INNOVA</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- Membro GGI -->
-      <!--section class="ggi-section">
+  <!-- Serviços em Destaque -->
+  <section class="section-featured">
+    <div class="container-fluid">
+      <h2 class="mb-4">Soluções em destaque</h2>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="feature-card">
+            <div class="feature-card-content">
+              <h5 class="feature-card-title">Governança de Serviços Exclusiva</h5>
+              <div class="feature-card-img">
+                <img src="img/home/governanca-de-servicos-exclusiva.webp"
+                  alt="Governança de Serviços - Reunião de negócios com gráficos e dados" />
+              </div>
+              <h6 class="feature-card-subtitle">Metodologia que Gera Valor Contínuo</h6>
+              <p class="feature-card-desc">Desenvolvemos um processo de governança único que não apenas gerencia, mas
+                otimiza seus serviços continuamente. O resultado? Previsibilidade, controle e um nível de satisfação que
+                transforma clientes em parceiros.</p>
+              <a href="#" class="feature-card-btn">
+                Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="feature-card">
+            <div class="feature-card-content">
+              <h5 class="feature-card-title">Tecnologia de Ponta e Automação</h5>
+              <div class="feature-card-img">
+                <img src="img/home/tecnologia-de-ponta-e-automacao.webp"
+                  alt="Tecnologia e Automação - Interface de login em tablet" />
+              </div>
+              <h6 class="feature-card-subtitle">Tecnologia que Liberta, Não Limita</h6>
+              <p class="feature-card-desc">Nossa expertise em ERP MXM, somada a robôs de automação exclusivos, elimina
+                tarefas manuais e acelera suas operações. Integramos nosso sistema ou potencializamos o seu, garantindo
+                agilidade e dados confiáveis.</p>
+              <a href="#" class="feature-card-btn">
+                Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="feature-card">
+            <div class="feature-card-content">
+              <h5 class="feature-card-title">Expertise Sênior e Atendimento Personalizado</h5>
+              <div class="feature-card-img">
+                <img src="img/home/expertise-senior-e-atendimento-personalizado.webp"
+                  alt="Expertise Sênior - Mulher analisando dados em computador" />
+              </div>
+              <h6 class="feature-card-subtitle">Decisões Estratégicas, Não Apenas Relatórios</h6>
+              <p class="feature-card-desc">Nossos fundadores e gestores trazem mais de 30 anos de experiência em
+                posições de liderança. Você não fala com um júnior, fala com quem entende do seu negócio e oferece
+                insights estratégicos, não apenas números.</p>
+              <a href="#" class="feature-card-btn">
+                Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="feature-card">
+            <div class="feature-card-content">
+              <h5 class="feature-card-title">Estrutura Ágil e Alcance Global</h5>
+              <div class="feature-card-img">
+                <img src="img/home/estrutura-agil-e-alcance-global.webp"
+                  alt="Alcance Global - Globo terrestre com folhas verdes" />
+              </div>
+              <h6 class="feature-card-subtitle">Agilidade de Boutique, Força de Multinacional</h6>
+              <p class="feature-card-desc">Combinamos a flexibilidade e o atendimento direto de uma estrutura enxuta com
+                o poder da nossa rede global GGI. Respostas rápidas para desafios locais e suporte robusto para expansão
+                internacional.</p>
+              <a href="#" class="feature-card-btn">
+                Saiba mais <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nossas-solucoes-seus-resultados" class="nossas-solucoes-seus-resultados">
+    <div class="nossas-solucoes-bg" role="img"
+      aria-label="Sala de reunião moderna com pessoas colaborando em torno de uma mesa"></div>
+    <div class="nossas-solucoes-overlay"></div>
+    <div class="container-fluid">
+      <div class="nossas-solucoes-content">
+        <h2 class="nossas-solucoes-title">Nossas Soluções, Seus Resultados</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos e Soluções - Mosaico com imagens (como solicitado pelo cliente) -->
+  <section id="servicos" class="solutions">
+    <div class="container-fluid">
+      <div class="section-head">
+        <div class="section-accent mb-2"></div>
+        <div class="section-kicker">Nossos Serviços, seus resultados</div>
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-sub">Estratégia, processos e automação para acelerar resultados.</p>
+      </div>
+
+      <!-- Grid de Serviços -->
+      <div class="services-grid">
+        <div class="row g-4">
+          <!-- Row 1: 3 cards -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/contabil.webp" alt="Contábil - Relatórios financeiros e gráficos" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Contábil</h3>
+                <p class="service-card-desc">Atuamos na área contábil a fim de atender todas normas e obrigações
+                  contábeis, apresentando relatórios que auxiliam a gerência na tomada de decisões.</p>
+                <a href="#contabil" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/fiscal.webp" alt="Fiscal - Gestão tributária e benefícios" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Fiscal</h3>
+                <p class="service-card-desc">Garantimos que sua empresa tenha o melhor desempenho tributário,
+                  monitorando alternativas justas que permitam o aproveitamento dos benefícios que a lei possa garantir.
+                </p>
+                <a href="#fiscal" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/financeiro.webp" alt="Financeiro - Gestão de recursos e investimentos" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Financeiro</h3>
+                <p class="service-card-desc">Aprimoramos a gestão financeira de nossos clientes e apresentando de forma
+                  clara, as informações necessárias para a otimização da gestão de recursos e investimentos.</p>
+                <a href="#financeiro" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: 3 cards -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/folha.webp" alt="Folha - Processamento de pagamentos" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Folha</h3>
+                <p class="service-card-desc">Processamento de folha de pagamento, e atendimento consultivo diferenciado,
+                  em conformidade com o e-Social e demais obrigações.</p>
+                <a href="#folha" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/tecnologia.webp" alt="Tecnologia - ERP e inteligência artificial" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Tecnologia</h3>
+                <p class="service-card-desc">Usamos ERP de ponta ou ERP do cliente, ferramentas complementares e
+                  inteligência artificial para que nossos clientes tenham informações com confiabilidade e acuracidade.
+                </p>
+                <a href="#tecnologia" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-card-img">
+                <img src="img/home/paralegal.webp" alt="Paralegal - Processos burocráticos" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title">Paralegal</h3>
+                <p class="service-card-desc">Nossos serviços de paralegal resolvem os processos burocráticos com
+                  maestria, rapidez e precisão, para que sua empresa esteja sempre de acordo com o requerido.</p>
+                <a href="#paralegal" class="btn btn-service-outline">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card especial abaixo do grid -->
+        <div class="row mt-5">
+          <div class="col-12 col-lg-8 mx-auto">
+            <div class="service-card service-card-special">
+              <div class="service-card-img">
+                <img src="img/home/servicos-especiais.webp" alt="Serviços Especiais - Soluções personalizadas" />
+              </div>
+              <div class="service-card-content">
+                <h3 class="service-card-title text-dark">Serviços Especiais</h3>
+                <p class="service-card-desc text-dark">Nossos serviços especiais são para necessidades específicas que
+                  requerem especialistas de alto nível para solucionar as necessidades.</p>
+                <a href="#servicos-especiais" class="btn btn-service-primary">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" style="background-color: #004E29;">
+    <div class="container-fluid">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <div class="cta-accent mb-3"></div>
+          <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
+          <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
+            equipe prepara uma proposta sob medida para a sua realidade.</p>
+        </div>
+        <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
+          <a href="#contato" class="btn btn-cta-primary">Entre em Contato</a>
+          <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Membro GGI -->
+  <!--section class="ggi-section">
         <div class="container-fluid">
           <div class="row g-4 align-items-center">
             <div class="col-lg-6">
@@ -1114,121 +1663,139 @@
         </div>
       </section-->
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="row g-5">
-            <!-- Coluna 1: Sobre a empresa -->
-            <div class="col-12 col-lg-4">
-              <div class="footer-brand mb-4">
-                <img src="img/logo.png" alt="BPO Innova" height="48" class="mb-3" />
-                <p class="footer-desc">Transformamos seu backoffice em uma vantagem competitiva através de governança de serviços, tecnologia de ponta e expertise sênior.</p>
-              </div>
-              <div class="footer-social">
-                <h6 class="footer-social-title mb-3">Siga-nos</h6>
-                <div class="d-flex gap-3">
-                  <a href="#" class="social-link" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                  <a href="#" class="social-link" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a href="#" class="social-link" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="#" class="social-link" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <!-- Seção principal do footer -->
+      <div class="row g-4">
+        <!-- Coluna 1: Informações da empresa -->
+        <div class="col-12 col-lg-3">
+          <div class="footer-brand">
+            <div class="footer-logo-section mb-3">
+              <img src="img/logo.png" alt="BPO Innova" height="66" class="footer-logo mb-2" />
             </div>
-
-            <!-- Coluna 2: Serviços -->
-            <div class="col-12 col-md-6 col-lg-2">
-              <h5 class="footer-title mb-4">Serviços</h5>
-              <ul class="footer-links">
-                <li><a href="#contabil">Contábil</a></li>
-                <li><a href="#fiscal">Fiscal</a></li>
-                <li><a href="#financeiro">Financeiro</a></li>
-                <li><a href="#folha">Folha</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#paralegal">Paralegal</a></li>
-              </ul>
-            </div>
-
-            <!-- Coluna 3: Empresa -->
-            <div class="col-12 col-md-6 col-lg-2">
-              <h5 class="footer-title mb-4">Empresa</h5>
-              <ul class="footer-links">
-                <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="#equipe">Nossa equipe</a></li>
-                <li><a href="#parceiros">Parceiros</a></li>
-                <li><a href="#carreiras">Carreiras</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#imprensa">Imprensa</a></li>
-              </ul>
-            </div>
-
-            <!-- Coluna 4: Suporte e Contato -->
-            <div class="col-12 col-md-6 col-lg-2">
-              <h5 class="footer-title mb-4">Suporte</h5>
-              <ul class="footer-links">
-                <li><a href="#ajuda">Central de ajuda</a></li>
-                <li><a href="#documentacao">Documentação</a></li>
-                <li><a href="#treinamento">Treinamentos</a></li>
-                <li><a href="#status">Status do sistema</a></li>
-                <li><a href="#contato">Contato</a></li>
-              </ul>
-            </div>
-
-            <!-- Coluna 5: Contato -->
-            <div class="col-12 col-md-6 col-lg-2">
-              <h5 class="footer-title mb-4">Contato</h5>
-              <div class="footer-contact">
-                <div class="contact-item mb-3">
-                  <i class="fa-solid fa-phone me-2"></i>
-                  <span>+55 (11) 99999-9999</span>
-                </div>
-                <div class="contact-item mb-3">
-                  <i class="fa-solid fa-envelope me-2"></i>
-                  <span>contato@bpoinnova.com.br</span>
-                </div>
-                <div class="contact-item mb-3">
-                  <i class="fa-solid fa-location-dot me-2"></i>
-                  <span>São Paulo, SP - Brasil</span>
-                </div>
-                <div class="contact-item">
-                  <i class="fa-solid fa-clock me-2"></i>
-                  <span>Seg-Sex: 8h às 18h</span>
-                </div>
-              </div>
+            <div class="footer-desc">
+              <p class="footer-desc-main mb-3">Outsourcing com inteligência, entregando alta performance para o seu
+                negócio.</p>
+              <p class="footer-desc-detail mb-0">Nossas soluções de <strong>Contabilidade</strong>,
+                <strong>Fiscal</strong>, <strong>Financeiro</strong>, <strong>Folha de Pagamento</strong>,
+                <strong>Tecnologia</strong>, <strong>Paralegal</strong> e <strong>Serviços Especiais</strong>, são
+                desenhadas para entregar uma experiência de primeira classe para empresas de médio e grande porte.</p>
             </div>
           </div>
+        </div>
 
-          <!-- Linha divisória -->
-          <hr class="footer-divider my-5" />
+        <!-- Coluna 2: Links importantes -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-section">
+            <h5 class="footer-title mb-3">
+              Links importantes
+            </h5>
+            <ul class="footer-links">
+              <li><a href="#inicio"><i class="fa-solid fa-chevron-right link-arrow"></i>Início</a></li>
+              <li><a href="#servicos"><i class="fa-solid fa-chevron-right link-arrow"></i>Serviços</a></li>
+              <li><a href="#solucoes"><i class="fa-solid fa-chevron-right link-arrow"></i>Soluções por Segmento</a></li>
+              <li><a href="#tecnologia"><i class="fa-solid fa-chevron-right link-arrow"></i>Tecnologia e Inovação</a>
+              </li>
+              <li><a href="#sobre"><i class="fa-solid fa-chevron-right link-arrow"></i>Sobre Nós</a></li>
+              <li><a href="#contato"><i class="fa-solid fa-chevron-right link-arrow"></i>Contato</a></li>
+              <li><a href="#blog"><i class="fa-solid fa-chevron-right link-arrow"></i>Insights / Blog</a></li>
+              <li><a href="#trabalhe"><i class="fa-solid fa-chevron-right link-arrow"></i>Trabalhe Conosco</a></li>
+            </ul>
+          </div>
+        </div>
 
-          <!-- Rodapé inferior -->
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-              <p class="footer-copyright mb-0">
-                © 2024 BPO Innova. Todos os direitos reservados.
-              </p>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="footer-legal d-flex gap-4 justify-content-md-end">
-                <a href="#privacidade" class="footer-legal-link">Política de Privacidade</a>
-                <a href="#termos" class="footer-legal-link">Termos de Uso</a>
-                <a href="#cookies" class="footer-legal-link">Cookies</a>
+        <!-- Coluna 3: Políticas -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-section">
+            <h5 class="footer-title mb-3">
+              Políticas
+            </h5>
+            <ul class="footer-links">
+              <li><a href="#cookies"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Cookies</a></li>
+              <li><a href="#privacidade"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Privacidade</a>
+              </li>
+              <li><a href="#lavagem"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Prevenção e Combate
+                  à Lavagem de Dinheiro</a></li>
+              <li><a href="#seguranca"><i class="fa-solid fa-chevron-right link-arrow"></i>Política do Sistema de Gestão
+                  de Segurança da Informação</a></li>
+              <li><a href="#inclusao"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Inclusão e
+                  Diversidade</a></li>
+              <li><a href="#termos"><i class="fa-solid fa-chevron-right link-arrow"></i>Termos de Uso</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Contato -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-section">
+            <h5 class="footer-title mb-3">
+              Contato
+            </h5>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <a href="#" class="social-link-linkedin" title="Siga-nos no LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span class="social-text">LinkedIn</span>
+                </a>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">Telefone</span>
+                  <span class="contact-value">+55 11 3197-4267</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">comercial@bpoinnova-sp.com</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">Endereço</span>
+                  <span class="contact-value">Av. Queiroz Filho, 1.700 - Torre A - Sala 301 / São Paulo - SP</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-    </script>
+
+
+      <!-- Rodapé inferior -->
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6">
+            <p class="footer-copyright">
+              © 2024 BPO Innova. Todos os direitos reservados.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="footer-legal">
+              <a href="#privacidade" class="footer-legal-link">
+                Feito com ❤️ por Matheus Teixeira
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
