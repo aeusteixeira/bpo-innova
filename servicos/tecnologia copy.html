@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BPO Innova - Tecnologia e Inovação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D07400;
+            --primary-dark: #004E29;
+            --accent-blue: #00D4FF;
+            --accent-purple: #8B5CF6;
+            --tech-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gold-gradient: linear-gradient(135deg, #D07400 0%, #FFD700 100%);
+            --dark-gradient: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            padding-top: 72px;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--dark-gradient);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Animações globais */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(208, 116, 0, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(208, 116, 0, 0.8), 0 0 60px rgba(208, 116, 0, 0.6); }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Navbar modernizada */
+        .navbar {
+            background: rgba(15, 15, 35, 0.95) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(208, 116, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            filter: drop-shadow(0 0 10px rgba(208, 116, 0, 0.5));
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-gold) !important;
+            text-shadow: 0 0 10px rgba(208, 116, 0, 0.5);
+        }
+
+        .btn-warning {
+            background: var(--gold-gradient);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-warning::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-warning:hover::before {
+            left: 100%;
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(208, 116, 0, 4);
+        }
+
+        /* Hero Section futurista */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--dark-gradient);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(208, 116, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('../img/servicos/tecnologia.jpg') center/cover no-repeat;
+            filter: brightness(0.3) saturate(1.2) contrast(1.1);
+            opacity: 0.7;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, 
+                rgba(15, 15, 35, 0.9) 0%, 
+                rgba(26, 26, 46, 0.8) 50%, 
+                rgba(22, 33, 62, 0.7) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 50%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(208, 116, 0, 0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        /* Elementos flutuantes tecnológicos */
+        .tech-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .tech-element {
+            position: absolute;
+            opacity: 0.6;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .tech-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 60px;
+            height: 60px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+
+        .tech-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-purple);
+            border-radius: 50%;
+            animation-delay: 2s;
+        }
+
+        .tech-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            animation-delay: 4s;
+        }
+
+        /* Seções modernizadas */
+        .section-modern {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+
+        .section-bg-light {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: var(--primary-dark);
+        }
+
+        .section-bg-dark {
+            background: var(--dark-gradient);
+            color: #ffffff;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Cards tecnológicos */
+        .tech-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .tech-card:hover::before {
+            left: 100%;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(208, 116, 0, 0.3);
+        }
+
+        .tech-card-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .tech-card-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .tech-card-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Imagens com efeitos */
+        .tech-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tech-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(208, 116, 0, 0.2) 0%, transparent 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tech-image:hover::before {
+            opacity: 1;
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .tech-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Lista de benefícios moderna */
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-gold);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Botões modernos */
+        .btn-modern {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .btn-primary-modern {
+            background: var(--gold-gradient);
+            color: #fff;
+        }
+
+        .btn-outline-modern {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(208, 116, 0, 4);
+        }
+
+        /* CTA Section futurista */
+        .cta-futuristic {
+            background: var(--dark-gradient);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-futuristic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(208, 116, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-desc {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer modernizado */
+        .footer-modern {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            color: #ffffff;
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(208, 116, 0, 0.3);
+        }
+
+        .footer-logo {
+            height: 80px;
+            filter: drop-shadow(0 0 20px rgba(208, 116, 0, 0.5));
+        }
+
+        .footer-title {
+            color: var(--primary-gold);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            transform: translateX(10px);
+        }
+
+        /* Responsividade */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+            
+            .section-modern {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
+            }
+            
+            .tech-card {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Elementos flutuantes tecnológicos -->
+    <div class="tech-elements">
+        <div class="tech-element"></div>
+        <div class="tech-element"></div>
+        <div class="tech-element"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="../img/logo.png" alt="BPO Innova" height="48" class="d-inline-block" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary"
+                aria-controls="navbarPrimary" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarPrimary">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Soluções</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#tecnologia">Tecnologia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+                <div class="d-flex ms-lg-3">
+                    <a href="#contato" class="btn btn-warning">Solicite uma Proposta</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container-fluid">
+            <div class="hero-content">
+                <h1 class="hero-title">Tecnologia de Ponta Acelerando seu Crescimento</h1>
+                <p class="hero-sub">
+                    Em um mercado que exige agilidade, a tecnologia não pode ser um gargalo. Nossa arquitetura tecnológica é um dos pilares da sua performance. Oferecemos um ecossistema robusto, seguro e integrado, projetado para eliminar atritos, automatizar processos e transformar dados em decisões estratégicas.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#solucoes" class="btn btn-warning btn-lg">
+                        <i class="fa-solid fa-rocket me-2"></i>Explorar Soluções
+                    </a>
+                    <a href="#contato" class="btn btn-outline-light btn-lg">
+                        <i class="fa-solid fa-arrow-right me-2"></i>Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: ERP de Alta Performance -->
+    <section id="solucoes" class="section-modern section-bg-light">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="tech-image h-100">
+                        <img src="../img/servicos/erp.jpg" alt="ERP de Alta Performance MXM" class="h-100">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="ps-lg-5">
+                        <div class="section-subtitle">Solução Completa</div>
+                        <h2 class="section-title">ERP de Alta Performance à sua Disposição</h2>
+                        <p class="section-desc">
+                            Oferecemos acesso ao nosso ERP MXM, uma plataforma completa e robusta, hospedada em um ambiente de nuvem de primeira linha. Isso se traduz em segurança de nível enterprise, banco de dados Oracle, backups automáticos e um plano de recuperação de desastres.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <h4 class="h5 text-warning mb-3">Diferencial Chave:</h4>
+                            <p class="fs-6 mb-4">
+                                Nossa expertise exclusiva em MXM, somada a robôs de automação desenvolvidos internamente, garante uma produtividade e eficiência que você não encontrará em outro lugar.
+                            </p>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="tech-card h-100">
+                                    <div class="tech-card-icon">
+                                        <i class="fa-solid fa-cloud"></i>
+                                    </div>
+                                    <h5 class="tech-card-title">Cloud Enterprise</h5>
+                                    <p class="tech-card-desc">Infraestrutura em nuvem de primeira linha com segurança enterprise</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tech-card h-100">
+                                    <div class="tech-card-icon">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+                                    <h5 class="tech-card-title">Automação Inteligente</h5>
+                                    <p class="tech-card-desc">Robôs de automação desenvolvidos internamente para máxima eficiência</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contato" class="btn btn-modern btn-primary-modern">
+                                <i class="fa-solid fa-rocket me-2"></i>Experimente o ERP MXM
+                            </a>
+                            <a href="#servicos" class="btn btn-modern btn-outline-modern">
+                                <i class="fa-solid fa-arrow-right me-2"></i>Conheça Outras Soluções
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Flexibilidade e Integração -->
+    <section class="section-modern section-bg-dark">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="pe-lg-5">
+                        <div class="section-subtitle">Integração Perfeita</div>
+                        <h2 class="section-title">Flexibilidade Total para Potencializar o Seu Ambiente</h2>
+                        <p class="section-desc">
+                            Se sua empresa já possui um sistema ERP consolidado, nossa equipe se integra perfeitamente ao seu ambiente. Levamos nossas melhores práticas de governança, nossa metodologia de integração e nossa expertise em automação para dentro da sua operação.
+                        </p>
+
+                        <div class="mb-4">
+                            <h4 class="h5 text-warning mb-3">Como Funciona a Integração:</h4>
+                            <ul class="benefit-list">
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-puzzle-piece"></i>
+                                    </div>
+                                    <div class="benefit-text">Integração perfeita com seu ERP existente sem interrupções</div>
+                                </li>
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-cogs"></i>
+                                    </div>
+                                    <div class="benefit-text">Implementação de melhores práticas de governança e metodologias</div>
+                                </li>
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </div>
+                                    <div class="benefit-text">Maximização do ROI do seu investimento tecnológico atual</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contato" class="btn btn-modern btn-primary-modern">
+                                <i class="fa-solid fa-link me-2"></i>Integre com seu ERP
+                            </a>
+                            <a href="#servicos" class="btn btn-modern btn-outline-modern">
+                                <i class="fa-solid fa-arrow-right me-2"></i>Ver Soluções de Integração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="tech-image h-100">
+                        <img src="../img/servicos/flexibilidade.jpg" alt="Flexibilidade e Integração com Sistemas Existentes" class="h-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Fluxo de Trabalho Digital -->
+    <section class="section-modern section-bg-light">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="tech-image h-100">
+                        <img src="../img/servicos/fluxo-trabalho.jpg" alt="Fluxo de Trabalho Digital e Controle Centralizado" class="h-100">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="ps-lg-5">
+                        <div class="section-subtitle">Transformação Digital</div>
+                        <h2 class="section-title">Fluxo de Trabalho Digital</h2>
+                        <h3 class="h4 text-warning mb-4 fw-bold">
+                            Adeus, Papel. Olá, Eficiência.
+                        </h3>
+                        <p class="section-desc">
+                            Simplifique o envio e a gestão de documentos fiscais e contábeis. Nossa plataforma digital centraliza o fluxo de informações de forma segura e organizada, eliminando a necessidade de trocas de e-mails e papéis.
+                        </p>
+
+                        <div class="mb-4">
+                            <h4 class="h5 text-dark mb-3">Benefícios da Digitalização:</h4>
+                            <ul class="benefit-list">
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-shield-alt"></i>
+                                    </div>
+                                    <div class="benefit-text">Centralização segura e organizada de todas as informações</div>
+                                </li>
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-search"></i>
+                                    </div>
+                                    <div class="benefit-text">Rastreabilidade total de documentos e processos</div>
+                                </li>
+                                <li class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
+                                    <div class="benefit-text">Acesso rápido e eficiente para toda a equipe</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contato" class="btn btn-modern btn-primary-modern">
+                                <i class="fa-solid fa-digital-tachograph me-2"></i>Digitalize seus Processos
+                            </a>
+                            <a href="#servicos" class="btn btn-modern btn-outline-modern">
+                                <i class="fa-solid fa-arrow-right me-2"></i>Ver Soluções Digitais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section Futurista -->
+    <section class="cta-futuristic">
+        <div class="container-fluid">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para o Futuro da Tecnologia?</h2>
+                <p class="cta-desc">
+                    Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa equipe prepara uma proposta sob medida para a sua realidade, transformando desafios em oportunidades de crescimento.
+                </p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <a href="#contato" class="btn btn-modern btn-primary-modern btn-lg">
+                        <i class="fa-solid fa-rocket me-2"></i>Transforme seu Negócio
+                    </a>
+                    <a href="#servicos" class="btn btn-modern btn-outline-modern btn-lg">
+                        <i class="fa-solid fa-arrow-right me-2"></i>Explorar Soluções
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Moderno -->
+    <footer class="footer-modern">
+        <div class="container-fluid">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="mb-4">
+                        <img src="../img/logo.png" alt="BPO Innova" class="footer-logo mb-3">
+                        <p class="text-light">
+                            <strong>BPO Innova</strong> é especialista em terceirização de processos de negócio, 
+                            oferecendo soluções personalizadas que impulsionam a eficiência operacional e 
+                            permitem que sua empresa foque no que realmente importa: crescimento e inovação.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5 class="footer-title">Links Rápidos</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#blog">Insights / Blog</a></li>
+                        <li><a href="#trabalhe">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">Políticas</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#cookies">Política de Cookies</a></li>
+                        <li><a href="#privacidade">Política de Privacidade</a></li>
+                        <li><a href="#termos">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="footer-title">Contato</h5>
+                    <div class="text-light">
+                        <p><i class="fa-solid fa-phone me-2"></i>+55 11 3197-4267</p>
+                        <p><i class="fa-solid fa-envelope me-2"></i>comercial@bpoinnova-sp.com</p>
+                        <p><i class="fa-solid fa-location-dot me-2"></i>São Paulo - SP</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(208, 116, 0, 0.3);">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <p class="text-light mb-0">© 2024 BPO Innova. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="text-light mb-0">Feito com ❤️ por Matheus Teixeira</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
