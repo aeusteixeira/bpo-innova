@@ -105,7 +105,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('../img/servicos/bpo.jpg') center/cover no-repeat;
+      background: url('img/contato/contato.jpg') center/cover no-repeat;
       filter: brightness(.75) saturate(1.1) contrast(1.05);
     }
 
@@ -1131,6 +1131,8 @@
     }
 
     .contact-item {
+      display: flex;
+      align-items: center;
       margin-bottom: 18px;
       transition: all 0.3s ease;
       padding: 6px 0;
@@ -1168,26 +1170,24 @@
     }
 
     .contact-icon-wrapper {
-      width: 45px;
-      height: 45px;
+      width: 32px;
+      height: 32px;
       background: #D07400;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 18px;
+      margin-right: 12px;
       box-shadow: 0 2px 8px rgba(208, 116, 0, 0.2);
       flex-shrink: 0;
     }
 
     .contact-icon-wrapper i {
       color: #ffffff;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
 
     .contact-info {
-      display: flex;
-      flex-direction: column;
       flex: 1;
       min-width: 0;
     }
@@ -1313,8 +1313,8 @@
       .contact-icon-wrapper {
         margin-bottom: 12px;
         margin-right: 0;
-        width: 40px;
-        height: 40px;
+        width: 28px;
+        height: 28px;
       }
 
       .social-link-linkedin {
@@ -1323,13 +1323,218 @@
       }
     }
 
-    .img-efeito {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* Estilos do Formulário de Contato */
+    .contact-form {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9ecef;
+      height: fit-content;
     }
 
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      color: #2c3e50;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .form-control,
+    .form-select {
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      padding: 0.875rem 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background-color: #ffffff;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #D07400;
+      box-shadow: 0 0 0 0.2rem rgba(208, 116, 0, 0.15);
+      outline: none;
+    }
+
+    .form-control::placeholder {
+      color: #6c757d;
+      opacity: 0.7;
+    }
+
+    .form-select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+    }
+
+    .btn-warning {
+      background: #D07400;
+      border-color: #D07400;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .btn-warning:hover {
+      background: #e4810d;
+      border-color: #e4810d;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(208, 116, 0, 0.3);
+    }
+
+    /* Responsividade do formulário */
+    @media (max-width: 767.98px) {
+      .contact-form {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+      }
+      
+      .form-control,
+      .form-select {
+        font-size: 0.95rem;
+        padding: 0.75rem 0.875rem;
+      }
+      
+      .btn-warning {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* Estilos da Seção de Informações de Contato */
+    .contact-info-section {
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9ecef;
+      height: fit-content;
+    }
+
+    .contact-items {
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      border-color: #D07400;
+    }
+
+    .contact-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #D07400 0%, #e4810d 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(208, 116, 0, 0.3);
+    }
+
+    .contact-icon-wrapper i {
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-label {
+      color: #2c3e50;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-value {
+      color: #5c6670;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Estilos do Mapa */
+    .map-container {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      border: 1px solid #e9ecef;
+    }
+
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      height: 250px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    /* Responsividade da seção de contato */
+    @media (max-width: 991.98px) {
+      .contact-item {
+        padding: 1.25rem;
+      }
+      
+      .contact-icon-wrapper {
+        width: 44px;
+        height: 44px;
+      }
+      
+      .contact-icon-wrapper i {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .contact-info-section {
+        padding: 1rem 0;
+        text-align: center;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+      
+      .contact-icon-wrapper {
+        margin: 0 auto 1rem;
+      }
+      
+      .map-wrapper {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 
@@ -1337,7 +1542,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src="../img/logo.png" alt="BPO Innova" height="48" class="d-inline-block" />
+        <img src="img/logo.png" alt="BPO Innova" height="48" class="d-inline-block" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary"
         aria-controls="navbarPrimary" aria-expanded="false" aria-label="Alternar navegação">
@@ -1345,8 +1550,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarPrimary">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="../servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicos">Soluções por Segmento</a></li>
           <li class="nav-item"><a class="nav-link" href="#solucoes">Tecnologia e Inovação</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
@@ -1384,9 +1589,9 @@
     <div class="hero-overlay"></div>
     <div class="container-fluid">
       <div class="hero-content">
-        <h1 class="hero-title mb-3">Business Process Outsourcing (BPO) Integrado</h1>
-        <p class="hero-sub">Assumimos a gestão de processos críticos com uma metodologia de governança de serviços única, tecnologia de ponta e uma equipe de especialistas, permitindo que você foque no que realmente importa: o crescimento do seu negócio. 
-        </p>
+        <h1 class="hero-title mb-3">Vamos Conversar <br> Sobre o Futuro do <br> Seu Negócio?</h1>
+        <p class="hero-sub">Integramos governança de serviços, tecnologia de ponta e expertise sênior para transformar
+          seu backoffice em um motor de crescimento. Chega de burocracia, olá performance.</p>
       </div>
       <!-- div class="hero-cta">
         <a href="#contato" class="btn btn-cta-primary">Solicite uma Proposta</a>
@@ -1395,229 +1600,205 @@
     </div>
   </section>
 
-  <!-- Seção: BPO Contábil e Fiscal como Ferramenta Estratégica -->
-  <section style="height: 100vh; display: flex; align-items: center; padding-right: 40px;">
-    <div class="h-100">
-      <div class="row align-items-center h-100">
-        
-        <!-- Coluna 1: Imagem -->
-        <div class="col-lg-6 h-100">
-          <div class="h-100">
-            <img src="../img/servicos/contabil-fiscal.jpg" 
-                 alt="BPO Contábil e Fiscal" 
-                 class="img-fluid img-efeito w-100 h-100" 
-                 >
-          </div>
-        </div>
-        
-        <!-- Coluna 2: Texto -->
-        <div class="col-lg-6 d-flex align-items-center h-100">
-          <div class="ps-lg-5">
+  <!-- Seção de Contato -->
+  <section class="py-5" style="background-color: #ffffff;">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="text-center mb-5">
             <h2 class="display-5 fw-bold mb-4 text-dark">
-              BPO Contábil e Fiscal como Ferramenta Estratégica
+              Nossa equipe de especialistas está pronta para entender seus desafios e desenhar a solução ideal para sua empresa.
             </h2>
-            <p class="fs-5 mb-4 text-muted">
-              Transformamos a contabilidade de uma obrigação em uma fonte de insights valiosos. Garantimos compliance total e geramos relatórios precisos que dão clareza para a tomada de decisão do C-level e do Conselho. Navegamos pela complexidade do sistema tributário brasileiro para mitigar riscos e otimizar sua carga fiscal.
+            <p class="fs-5 text-muted">
+              Preencha o formulário ou escolha um dos canais abaixo.
             </p>
-            
-            <div class="mb-4">
-              <h4 class="h5 text-warning mb-3">Ideal para empresas que enfrentam:</h4>
-              <ul class="list-unstyled">
-                <li class="mb-3 d-flex align-items-start">
-                  <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                  <span class="text-dark">Dificuldade em gerar demonstrações financeiras confiáveis e no prazo requerido.</span>
-                </li>
-                <li class="mb-3 d-flex align-items-start">
-                  <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                  <span class="text-dark">Alto custo e baixa performance com a contabilidade atual (interna ou externa).</span>
-                </li>
-                <li class="mb-3 d-flex align-items-start">
-                  <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                  <span class="text-dark">Perda de profissionais estratégicos ou operacionais da equipe interna para o mercado.</span>
-                </li>
-                <li class="mb-3 d-flex align-items-start">
-                  <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                  <span class="text-dark">Insegurança e riscos diante da complexidade das obrigações fiscais.</span>
-                </li>
-              </ul>
+          </div>
+          
+          <div class="row g-5">
+            <!-- Coluna 1: Informações de Contato -->
+            <div class="col-lg-6">
+              <div class="contact-info-section">
+                <h3 class="h3 fw-bold mb-4 text-dark">Entre em Contato</h3>
+                <p class="fs-6 text-muted mb-4">Estamos prontos para atender você através dos nossos canais de contato.</p>
+                
+                <div class="contact-items">
+                  <div class="contact-item mb-3">
+                    <div class="contact-icon-wrapper">
+                      <i class="fa-solid fa-phone fa-sm"></i>
+                    </div>
+                    <div class="contact-info">
+                      <h5 class="contact-label mb-1">Telefone</h5>
+                      <p class="contact-value mb-0">+55 11 3197-4267</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-item mb-3">
+                    <div class="contact-icon-wrapper">
+                      <i class="fa-solid fa-envelope fa-sm"></i>
+                    </div>
+                    <div class="contact-info">
+                      <h5 class="contact-label mb-1">E-mail</h5>
+                      <p class="contact-value mb-0">comercial@bpoinnova-sp.com</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-item mb-4">
+                    <div class="contact-icon-wrapper">
+                      <i class="fa-solid fa-location-dot fa-sm"></i>
+                    </div>
+                    <div class="contact-info">
+                      <h5 class="contact-label mb-1">Endereço</h5>
+                      <p class="contact-value mb-0">Av. Queiroz Filho, 1.700 - Torre A - Sala 301<br>São Paulo - SP</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Mapa -->
+                <div class="map-container">
+                  <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7032840307684!2d-46.733944199999996!3d-23.5431721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e5465cfc7a1%3A0xaae37380391b0217!2sBPO%20INNOVA!5e0!3m2!1spt-BR!2sbr!4v1757260422672!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <!-- Call-to-Action -->
-            <div class="d-flex flex-wrap gap-3">
-              <a href="#contato" class="btn btn-warning btn-lg">
-                Falar com um especialista
+            <!-- Coluna 2: Formulário -->
+            <div class="col-lg-6">
+              <form class="contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="nome" class="form-label fw-semibold text-dark">Nome</label>
+                      <input type="text" class="form-control form-control-lg" id="nome" placeholder="Nome" required>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label fw-semibold text-dark">E-mail</label>
+                      <input type="email" class="form-control form-control-lg" id="email" placeholder="E-mail" required>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="telefone" class="form-label fw-semibold text-dark">Telefone</label>
+                      <input type="tel" class="form-control form-control-lg" id="telefone" placeholder="(99) 9 999-99999" required>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="empresa" class="form-label fw-semibold text-dark">Empresa</label>
+                      <input type="text" class="form-control form-control-lg" id="empresa" placeholder="Empresa" required>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="assunto" class="form-label fw-semibold text-dark">Assunto</label>
+                      <select class="form-select form-select-lg" id="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="contabilidade">Serviços de Contabilidade</option>
+                        <option value="fiscal">Serviços Fiscais</option>
+                        <option value="financeiro">BPO Financeiro</option>
+                        <option value="folha">Folha de Pagamento</option>
+                        <option value="tecnologia">Tecnologia e Inovação</option>
+                        <option value="paralegal">Serviços Paralegais</option>
+                        <option value="outros">Outros</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="mensagem" class="form-label fw-semibold text-dark">Mensagem</label>
+                      <textarea class="form-control form-control-lg" id="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-warning btn-lg px-5 w-100">
+                      <i class="fa-solid fa-paper-plane me-2"></i>Enviar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Membro GGI -->
+  <!--section class="ggi-section">
+        <div class="container-fluid">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="ggi-card h-100" style="background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.18);">
+                <div class="section-accent mb-2"></div>
+                <div class="section-kicker">Parcerias globais</div>
+                <h2 class="section-title mb-2">Somos membros da GGI (Geneva Group International)</h2>
+                <p class="section-sub mb-4" style="color: rgba(255,255,255,.85)">A filiação à GGI amplia nosso alcance internacional e conecta a BPO Innova a uma rede de especialistas em mais de 120 países, garantindo suporte local com padrão global.</p>
+                <div class="mb-3">
+                  <div class="benefit-item text-white"><i class="fa-solid fa-check text-white"></i><span>Acesso a experts multidisciplinares ao redor do mundo</span></div>
+                  <div class="benefit-item text-white"><i class="fa-solid fa-check text-white"></i><span>Boas práticas internacionais e atualização regulatória</span></div>
+                  <div class="benefit-item text-white"><i class="fa-solid fa-check text-white"></i><span>Suporte a projetos cross-border com governança</span></div>
+                </div>
+                <a href="#contato" class="btn btn-tile-primary">Fale com nossos consultores</a>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <div class="logo-badge d-inline-block mb-3">
+                <img src="img/ggi.png" alt="Logo GGI" class="partner-logo">
+              </div>
+              <p class="logo-caption mb-0">GGI é uma das maiores alianças mundiais de firmas independentes de auditoria, contabilidade, direito e consultoria.</p>
+            </div>
+          </div>
+        </div>
+      </section-->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <!-- Seção principal do footer -->
+      <div class="row g-4">
+        <!-- Coluna 1: Informações da empresa -->
+        <div class="col-12 col-lg-3">
+          <div class="footer-brand">
+            <div class="footer-logo-section mb-3">
+              <img src="img/logo.png" alt="BPO Innova" height="66" class="footer-logo mb-2" />
+            </div>
+            <div class="footer-desc">
+              <p class="footer-desc-main mb-3">Outsourcing com inteligência, entregando alta performance para o seu
+                negócio.</p>
+              <p class="footer-desc-detail mb-0">Nossas soluções de <strong>Contabilidade</strong>,
+                <strong>Fiscal</strong>, <strong>Financeiro</strong>, <strong>Folha de Pagamento</strong>,
+                <strong>Tecnologia</strong>, <strong>Paralegal</strong> e <strong>Serviços Especiais</strong>, são
+                desenhadas para entregar uma experiência de primeira classe para empresas de médio e grande porte.</p>
+            </div>
+            <div class="footer-social-links">
+              <a href="#" class="mt-3" style="font-size: 1.4rem;">
+                <i class="fa-brands fa-linkedin"></i>
               </a>
             </div>
           </div>
         </div>
-        
-      </div>
-    </div>
-  </section>
-  
 
-  <!-- Seção: BPO Financeiro com Visibilidade e Controle Total do seu Fluxo de Caixa -->
-  <section style="height: 100vh; display: flex; align-items: center; background-color: #f8f9fa; padding-left: 40px;">
-    <div class="h-100">
-      <div class="row align-items-center h-100">
-        <!-- Coluna 1: Texto -->
-        <div class="col-lg-6 h-100 d-flex align-items-center">
-          <div class="pe-lg-5">
-             <h2 class="display-5 fw-bold mb-4 text-dark">
-               BPO Financeiro com Visibilidade e Controle Total do seu Fluxo de Caixa
-             </h2>
-             <p class="fs-5 mb-4 text-muted">
-               Gerenciamos suas contas a pagar e a receber com precisão e eficiência. Nossa gestão financeira garante que os pagamentos sejam feitos no prazo, que os recebíveis sejam monitorados de perto e que você tenha uma visão clara e em tempo real da saúde financeira da sua empresa.
-             </p>
-             
-             <div class="mb-4">
-               <h4 class="h5 text-warning mb-3">Ideal para empresas que buscam:</h4>
-               <ul class="list-unstyled">
-                 <li class="mb-3 d-flex align-items-start">
-                   <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                   <span class="text-dark">Evitar o risco de multas por atrasos em pagamentos.</span>
-                 </li>
-                 <li class="mb-3 d-flex align-items-start">
-                   <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                   <span class="text-dark">Ter uma ferramenta eficaz para controlar a inadimplência.</span>
-                 </li>
-                 <li class="mb-3 d-flex align-items-start">
-                   <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                   <span class="text-dark">Liberar a equipe interna do esforço operacional do contas a receber e contas a pagar.</span>
-                 </li>
-                 <li class="mb-3 d-flex align-items-start">
-                   <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                   <span class="text-dark">Focar a equipe interna para o de faturamento e cobrança.</span>
-                 </li>
-               </ul>
-             </div>
-             
-             <!-- Call-to-Action -->
-             <div class="d-flex flex-wrap gap-3">
-               <a href="#contato" class="btn btn-warning btn-lg">
-                 Falar com um especialista
-               </a>
-             </div>
-
-           </div>
-         </div>
-         
-        <!-- Coluna 2: Imagem -->
-        <div class="col-lg-6 h-100">
-          <div class="h-100">
-            <img src="../img/servicos/bpo-financeiro.jpg" 
-                 alt="BPO Financeiro" 
-                 class="img-fluid img-efeito w-100 h-100" 
-                 >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   <!-- Seção: BPO de Folha de Pagamento com Precisão, Conformidade e Cuidado com seu Capital Humano -->
-   <section style="height: 100vh; display: flex; align-items: center; padding-right: 40px;">
-     <div class="h-100">
-       <div class="row align-items-center h-100">
-         <!-- Coluna 1: Imagem -->
-         <div class="col-lg-6 h-100">
-           <div class="h-100">
-             <img src="../img/servicos/folha.jpg" 
-                  alt="BPO de Folha de Pagamento" 
-                  class="img-fluid img-efeito w-100 h-100" 
-                  >
-           </div>
-         </div>
-          
-          <!-- Coluna 2: Texto -->
-          <div class="col-lg-6 h-100 d-flex align-items-center">
-            <div class="ps-lg-5">
-              <h2 class="display-5 fw-bold mb-4 text-dark">
-                BPO de Folha de Pagamento com Precisão, Conformidade e Cuidado com seu Capital Humano
-              </h2>
-              <p class="fs-5 mb-4 text-muted">
-                Cuidamos de todo o ciclo da folha de pagamento, desde a admissão até o desligamento. Garantimos precisão absoluta nos cálculos, total conformidade com a legislação trabalhista e a tranquilidade de que seus colaboradores serão pagos corretamente e no prazo, fortalecendo a confiança e a satisfação da equipe.
-              </p>
-              
-              <div class="mb-4">
-                <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
-                <ul class="list-unstyled">
-                  <li class="mb-3 d-flex align-items-start">
-                    <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                    <span class="text-dark">Possuem um alto volume de colaboradores e processos complexos de folha.</span>
-                  </li>
-                  <li class="mb-3 d-flex align-items-start">
-                    <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                    <span class="text-dark">Sofrem com a perda de profissionais estratégicos da área de RH/DP.</span>
-                  </li>
-                  <li class="mb-3 d-flex align-items-start">
-                    <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                    <span class="text-dark">Precisam garantir 100% de conformidade com o eSocial e outras obrigações.</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <!-- Call-to-Action -->
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#contato" class="btn btn-warning btn-lg">
-                  Falar com um especialista
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-        <!-- CTA -->
-        <section class="cta-band" style="background-color: #004E29;">
-          <div class="container-fluid">
-            <div class="row align-items-center g-4">
-              <div class="col-lg-8">
-                <div class="cta-accent mb-3"></div>
-                <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
-                <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
-                  equipe prepara uma proposta sob medida para a sua realidade.</p>
-              </div>
-              <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
-                <a href="#contato" class="btn btn-cta-primary">Entre em Contato</a>
-                <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-    <!-- Footer -->
-  <footer class="footer">
-    <div class="container-fluid">
-      <div class="row g-4">
-        <!-- Coluna 1: Logo e Descrição -->
-        <div class="col-12 col-lg-4">
-          <div class="footer-brand">
-            <div class="footer-logo-section">
-              <img src="../img/logo.png" alt="BPO Innova" class="footer-logo">
-              <span class="footer-badge">BPO Innova</span>
-            </div>
-            <div class="footer-desc">
-              <p class="footer-desc-main">Transformando backoffices em motores de crescimento</p>
-              <p class="footer-desc-detail">
-                <strong>BPO Innova</strong> é especialista em terceirização de processos de negócio, 
-                oferecendo soluções personalizadas que impulsionam a eficiência operacional e 
-                permitem que sua empresa foque no que realmente importa: crescimento e inovação.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coluna 2: Links Rápidos -->
-        <div class="col-12 col-md-6 col-lg-2">
+        <!-- Coluna 2: Links importantes -->
+        <div class="col-12 col-md-6 col-lg-3">
           <div class="footer-section">
-            <h5 class="footer-title">
-              <i class="fa-solid fa-link footer-title-icon"></i>
-              Links Rápidos
+            <h5 class="footer-title mb-3">
+              Links importantes
             </h5>
             <ul class="footer-links">
+              <li><a href="#inicio"><i class="fa-solid fa-chevron-right link-arrow"></i>Início</a></li>
+              <li><a href="#servicos"><i class="fa-solid fa-chevron-right link-arrow"></i>Serviços</a></li>
+              <li><a href="#solucoes"><i class="fa-solid fa-chevron-right link-arrow"></i>Soluções por Segmento</a></li>
+              <li><a href="#tecnologia"><i class="fa-solid fa-chevron-right link-arrow"></i>Tecnologia e Inovação</a>
+              </li>
               <li><a href="#sobre"><i class="fa-solid fa-chevron-right link-arrow"></i>Sobre Nós</a></li>
               <li><a href="#contato"><i class="fa-solid fa-chevron-right link-arrow"></i>Contato</a></li>
               <li><a href="#blog"><i class="fa-solid fa-chevron-right link-arrow"></i>Insights / Blog</a></li>
@@ -1629,16 +1810,19 @@
         <!-- Coluna 3: Políticas -->
         <div class="col-12 col-md-6 col-lg-3">
           <div class="footer-section">
-            <h5 class="footer-title">
-              <i class="fa-solid fa-shield-alt footer-title-icon"></i>
+            <h5 class="footer-title mb-3">
               Políticas
             </h5>
             <ul class="footer-links">
               <li><a href="#cookies"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Cookies</a></li>
-              <li><a href="#privacidade"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Privacidade</a></li>
-              <li><a href="#lavagem"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Prevenção e Combate à Lavagem de Dinheiro</a></li>
-              <li><a href="#seguranca"><i class="fa-solid fa-chevron-right link-arrow"></i>Política do Sistema de Gestão de Segurança da Informação</a></li>
-              <li><a href="#inclusao"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Inclusão e Diversidade</a></li>
+              <li><a href="#privacidade"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Privacidade</a>
+              </li>
+              <li><a href="#lavagem"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Prevenção e Combate
+                  à Lavagem de Dinheiro</a></li>
+              <li><a href="#seguranca"><i class="fa-solid fa-chevron-right link-arrow"></i>Política do Sistema de Gestão
+                  de Segurança da Informação</a></li>
+              <li><a href="#inclusao"><i class="fa-solid fa-chevron-right link-arrow"></i>Política de Inclusão e
+                  Diversidade</a></li>
               <li><a href="#termos"><i class="fa-solid fa-chevron-right link-arrow"></i>Termos de Uso</a></li>
             </ul>
           </div>
@@ -1647,16 +1831,10 @@
         <!-- Coluna 4: Contato -->
         <div class="col-12 col-md-6 col-lg-3">
           <div class="footer-section">
-            <h5 class="footer-title">
-              <i class="fa-solid fa-envelope footer-title-icon"></i>
+            <h5 class="footer-title mb-3">
               Contato
             </h5>
             <div class="footer-contact">
-              <div class="contact-item">
-                <a href="#" class="social-link-linkedin" title="Siga-nos no LinkedIn">
-                  <i class="fa-brands fa-linkedin fa-sm"></i>
-                </a>
-              </div>
               <div class="contact-item">
                 <div class="contact-icon-wrapper">
                   <i class="fa-solid fa-phone fa-sm"></i>
@@ -1685,6 +1863,8 @@
           </div>
         </div>
       </div>
+
+
 
       <!-- Rodapé inferior -->
       <div class="footer-bottom">
