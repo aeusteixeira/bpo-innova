@@ -1,0 +1,22 @@
+# Redirecionamentos para manter compatibilidade com URLs antigas
+Redirect 301 /index.html /index.php
+Redirect 301 /servicos.html /servicos.php
+Redirect 301 /sobre.html /sobre.php
+Redirect 301 /contato.html /contato.php
+
+# Redirecionamentos para arquivos na pasta servicos
+Redirect 301 /servicos/bpo.html /servicos/bpo.php
+Redirect 301 /servicos/paralegal.html /servicos/paralegal.php
+Redirect 301 /servicos/tecnologia.html /servicos/tecnologia.php
+Redirect 301 /servicos/solucoes-por-seguimento.html /servicos/solucoes-por-seguimento.php
+Redirect 301 /servicos/servicos-especiais.html /servicos/servicos-especiais.php
+
+# Configuração para arquivos WebP
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>
+
+# Headers para cache de imagens
+<FilesMatch "\.(webp|png|jpg|jpeg|gif|svg)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
