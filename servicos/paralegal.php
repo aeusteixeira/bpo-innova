@@ -7,8 +7,8 @@ $page_content = '
         <div class="hero-overlay"></div>
         <div class="container-fluid">
             <div class="hero-content">
-                <h1 class="hero-title mb-3">Paralegal Estratégico Da Estruturação à Conformidade Total</h1>
-                <p class="hero-sub">Navegar pela burocracia brasileira não precisa ser um obstáculo para o seu negócio. Nossa equipe de especialistas em paralegal cuida de todas as etapas do ciclo de vida da sua empresa com agilidade e precisão, garantindo que sua estrutura societária esteja sempre segura, regularizada e pronta para o crescimento. Deixe a complexidade conosco e foque na sua estratégia.
+                <h1 class="hero-title mb-3" data-translate="paralegal.hero_title">Paralegal Estratégico Da Estruturação à Conformidade Total</h1>
+                <p class="hero-sub" data-translate="paralegal.hero_sub">Navegar pela burocracia brasileira não precisa ser um obstáculo para o seu negócio. Nossa equipe de especialistas em paralegal cuida de todas as etapas do ciclo de vida da sua empresa com agilidade e precisão, garantindo que sua estrutura societária esteja sempre segura, regularizada e pronta para o crescimento. Deixe a complexidade conosco e foque na sua estratégia.
 
                 </p>
             </div>
@@ -36,41 +36,41 @@ $page_content = '
                 <!-- Coluna 2: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="paralegal.abertura_titulo">
                             Abertura de Empresa
                         </h2>
-                        <h3 class="h4 text-warning mb-4 fw-bold">
+                        <h3 class="h4 text-warning mb-4 fw-bold" data-translate="paralegal.abertura_subtitulo">
                             Nasça Forte e 100% Regularizado
                         </h3>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="paralegal.abertura_desc">
                             Estruturamos o nascimento da sua empresa da forma correta desde o primeiro dia. Cuidamos de todo o processo de registro, desde a elaboração do contrato social até a inscrição nos órgãos competentes, garantindo uma base sólida, em total conformidade e pronta para operar sem surpresas futuras.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="paralegal.abertura_ideal">Ideal para empresas que:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Precisam de orientação completa para abertura de empresa</span>
+                                    <span class="text-dark" data-translate="paralegal.abertura_item1">Precisam de orientação completa para abertura de empresa</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Desejam escolher o melhor regime tributário desde o início</span>
+                                    <span class="text-dark" data-translate="paralegal.abertura_item2">Desejam escolher o melhor regime tributário desde o início</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Querem evitar problemas futuros com documentação</span>
+                                    <span class="text-dark" data-translate="paralegal.abertura_item3">Querem evitar problemas futuros com documentação</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Buscam agilidade no processo de constituição</span>
+                                    <span class="text-dark" data-translate="paralegal.abertura_item4">Buscam agilidade no processo de constituição</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -87,41 +87,41 @@ $page_content = '
                 <!-- Coluna 1: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="pe-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="paralegal.encerramento_titulo">
                             Encerramento de Empresa
                         </h2>
-                        <h3 class="h4 text-warning mb-4 fw-bold">
+                        <h3 class="h4 text-warning mb-4 fw-bold" data-translate="paralegal.encerramento_subtitulo">
                             Encerre Ciclos com Segurança e Sem Pendências
                         </h3>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="paralegal.encerramento_desc">
                             Finalizar uma operação é um processo tão crítico quanto iniciá-la. Conduzimos o encerramento da sua empresa de forma meticulosa, garantindo que todas as obrigações sejam cumpridas e que não restem passivos ou pendências fiscais e legais. Feche este capítulo com total tranquilidade.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="paralegal.encerramento_ideal">Ideal para empresas que:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Precisam encerrar atividades de forma definitiva</span>
+                                    <span class="text-dark" data-translate="paralegal.encerramento_item1">Precisam encerrar atividades de forma definitiva</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Desejam evitar problemas futuros com órgãos reguladores</span>
+                                    <span class="text-dark" data-translate="paralegal.encerramento_item2">Desejam evitar problemas futuros com órgãos reguladores</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Querem quitar todas as obrigações fiscais e trabalhistas</span>
+                                    <span class="text-dark" data-translate="paralegal.encerramento_item3">Querem quitar todas as obrigações fiscais e trabalhistas</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Buscam tranquilidade no processo de encerramento</span>
+                                    <span class="text-dark" data-translate="paralegal.encerramento_item4">Buscam tranquilidade no processo de encerramento</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -158,41 +158,41 @@ $page_content = '
                 <!-- Coluna 2: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="paralegal.alvara_titulo">
                             Alvará de Funcionamento
                         </h2>
-                        <h3 class="h4 text-warning mb-4 fw-bold">
+                        <h3 class="h4 text-warning mb-4 fw-bold" data-translate="paralegal.alvara_subtitulo">
                             Agilidade para Sua Operação Começar
                         </h3>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="paralegal.alvara_desc">
                             O tempo é crucial para o negócio. Cuidamos da obtenção e renovação de todos os alvarás e licenças necessários para que sua empresa possa operar legalmente e sem interrupções. Removemos os entraves burocráticos para que você possa faturar o mais rápido possível.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="paralegal.alvara_ideal">Ideal para empresas que:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Precisam de alvarás para iniciar suas atividades</span>
+                                    <span class="text-dark" data-translate="paralegal.alvara_item1">Precisam de alvarás para iniciar suas atividades</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Desejam evitar multas por falta de licenças</span>
+                                    <span class="text-dark" data-translate="paralegal.alvara_item2">Desejam evitar multas por falta de licenças</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Querem agilidade no processo de licenciamento</span>
+                                    <span class="text-dark" data-translate="paralegal.alvara_item3">Querem agilidade no processo de licenciamento</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Buscam renovação automática de licenças</span>
+                                    <span class="text-dark" data-translate="paralegal.alvara_item4">Buscam renovação automática de licenças</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -209,41 +209,41 @@ $page_content = '
                 <!-- Coluna 1: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="pe-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="paralegal.alteracoes_titulo">
                             Registro de Alterações Contratuais
                         </h2>
-                        <h3 class="h4 text-warning mb-4 fw-bold">
+                        <h3 class="h4 text-warning mb-4 fw-bold" data-translate="paralegal.alteracoes_subtitulo">
                             Sua Estrutura Legal Acompanhando a Evolução do Negócio
                         </h3>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="paralegal.alteracoes_desc">
                             Sua empresa evoluiu? A estrutura legal precisa acompanhar. Gerenciamos com eficiência todas as alterações contratuais – seja a entrada ou saída de sócios, mudança de endereço, alteração de capital social ou objeto. Mantemos seus documentos societários sempre alinhados com a realidade do seu negócio.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="paralegal.alteracoes_ideal">Ideal para empresas que:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Tiveram entrada ou saída de sócios</span>
+                                    <span class="text-dark" data-translate="paralegal.alteracoes_item1">Tiveram entrada ou saída de sócios</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Mudaram de endereço ou expandiram operações</span>
+                                    <span class="text-dark" data-translate="paralegal.alteracoes_item2">Mudaram de endereço ou expandiram operações</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Alteraram capital social ou objeto social</span>
+                                    <span class="text-dark" data-translate="paralegal.alteracoes_item3">Alteraram capital social ou objeto social</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Precisam manter documentos sempre atualizados</span>
+                                    <span class="text-dark" data-translate="paralegal.alteracoes_item4">Precisam manter documentos sempre atualizados</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -280,41 +280,41 @@ $page_content = '
                 <!-- Coluna 2: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="paralegal.registro_titulo">
                             Registro nos Órgãos Competentes
                         </h2>
-                        <h3 class="h4 text-warning mb-4 fw-bold">
+                        <h3 class="h4 text-warning mb-4 fw-bold" data-translate="paralegal.registro_subtitulo">
                             Conformidade Garantida em Todas as Esferas
                         </h3>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="paralegal.registro_desc">
                             Garantimos que sua empresa esteja devidamente registrada e regularizada em todas as instâncias necessárias: Federal (Receita Federal), Estadual (Secretaria da Fazenda) e Municipal (Prefeitura). Uma gestão proativa que blinda sua operação contra multas e sanções.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="paralegal.registro_ideal">Ideal para empresas que:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Precisam se registrar em órgãos governamentais</span>
+                                    <span class="text-dark" data-translate="paralegal.registro_item1">Precisam se registrar em órgãos governamentais</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Desejam evitar multas por falta de registros</span>
+                                    <span class="text-dark" data-translate="paralegal.registro_item2">Desejam evitar multas por falta de registros</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Querem conformidade em todas as esferas</span>
+                                    <span class="text-dark" data-translate="paralegal.registro_item3">Querem conformidade em todas as esferas</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Buscam gestão proativa de registros</span>
+                                    <span class="text-dark" data-translate="paralegal.registro_item4">Buscam gestão proativa de registros</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -330,14 +330,14 @@ $page_content = '
             <div class="row align-items-center g-4">
                 <div class="col-lg-8">
                     <div class="cta-accent mb-3"></div>
-                    <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
-                    <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com
+                    <h2 class="cta-title mb-3" data-translate="home.cta_title">Pronto para transformar a eficiência do seu negócio?</h2>
+                    <p class="cta-desc mb-0" data-translate="home.cta_desc">Combine processos otimizados e tecnologia de ponta para crescer com
                         confiança. Nossa
                         equipe prepara uma proposta sob medida para a sua realidade.</p>
                 </div>
                 <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
-                    <a href="#contato" class="btn btn-cta-primary">Entre em Contato</a>
-                    <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
+                    <a href="#contato" class="btn btn-cta-primary" data-translate="home.entre_contato">Entre em Contato</a>
+                    <a href="#servicos" class="btn btn-cta-outline" data-translate="home.conheca_servicos">Conheça os Serviços</a>
                 </div>
             </div>
         </div>

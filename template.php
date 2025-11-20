@@ -2,8 +2,9 @@
 // Detectar automaticamente o caminho base correto
 $script_path = $_SERVER['SCRIPT_FILENAME'] ?? __FILE__;
 
-// Verificar se estamos em uma subpasta (servicos/)
-if (strpos(str_replace('\\', '/', $script_path), '/servicos/') !== false) {
+// Verificar se estamos em uma subpasta (servicos/ ou politicas/)
+if (strpos(str_replace('\\', '/', $script_path), '/servicos/') !== false || 
+    strpos(str_replace('\\', '/', $script_path), '/politicas/') !== false) {
     $base_path = '../';
 } else {
     $base_path = '';
@@ -38,9 +39,15 @@ if (strpos(str_replace('\\', '/', $script_path), '/servicos/') !== false) {
 
   <?php include __DIR__ . '/sections/footer.php'; ?>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="<?php echo $base_path; ?>redirecionamento.php" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
   </script>
+  <script src="<?php echo $base_path; ?>js/translations.js"></script>
   <?php if (isset($custom_js) && !empty($custom_js)): ?>
     <script>
       <?php echo $custom_js; ?>

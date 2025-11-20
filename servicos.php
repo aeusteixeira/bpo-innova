@@ -12,8 +12,8 @@ $page_content = '
     <div class="hero-overlay"></div>
     <div class="container-fluid">
       <div class="hero-content">
-        <h1 class="hero-title mb-3">Serviços Desenhados para Performance e Governança</h1>
-        <p class="hero-sub">Mais do que terceirização. Uma parceria estratégica que transforma seu backoffice em um motor de crescimento, com a flexibilidade que seu negócio exige
+        <h1 class="hero-title mb-3" data-translate="servicos.hero_title">Serviços Desenhados para Performance e Governança</h1>
+        <p class="hero-sub" data-translate="servicos.hero_sub">Mais do que terceirização. Uma parceria estratégica que transforma seu backoffice em um motor de crescimento, com a flexibilidade que seu negócio exige
         </p>
       </div>
       <!-- div class="hero-cta">
@@ -28,10 +28,10 @@ $page_content = '
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <p class="text-muted fs-5 mb-4">
+          <p class="text-muted fs-5 mb-4" data-translate="servicos.texto_intro">
             Entendemos que cada empresa é única. Por isso, nossos serviços são modulares e totalmente integráveis. Você escolhe quais processos terceirizar e quais manter internamente, operando em nosso robusto ERP ou no seu próprio sistema. O resultado é um modelo operacional sob medida, projetado para máxima eficiência e escalabilidade.
           </p>
-          <h2 class="display-6 fw-bold text-warning mb-0">
+          <h2 class="display-6 fw-bold text-warning mb-0" data-translate="servicos.explore_titulo">
             Explore como as nossas Soluções vão levar a sua Empresa a outro Patamar de Excelência
           </h2>
         </div>
@@ -44,8 +44,8 @@ $page_content = '
     <div class="container-fluid">
       <div class="section-head">
         <div class="section-accent mb-2"></div>
-        <h2 class="section-title">Nossos Serviços, seus resultados</h2>
-        <p class="section-sub">Estratégia, processos e automação para acelerar resultados.</p>
+        <h2 class="section-title" data-translate="home.servicos_title">Nossos Serviços, seus resultados</h2>
+        <p class="section-sub" data-translate="home.servicos_sub">Estratégia, processos e automação para acelerar resultados.</p>
       </div>
 
       <!-- Grid de Serviços -->
@@ -58,10 +58,10 @@ $page_content = '
                 <img src="img/home/contabil.webp" alt="Contábil - Relatórios financeiros e gráficos" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Contábil</h3>
-                <p class="service-card-desc">Atuamos na área contábil a fim de atender todas normas e obrigações
+                <h3 class="service-card-title" data-translate="home.contabil">Contábil</h3>
+                <p class="service-card-desc" data-translate="home.contabil_desc">Atuamos na área contábil a fim de atender todas normas e obrigações
                   contábeis, apresentando relatórios que auxiliam a gerência na tomada de decisões.</p>
-                <a href="servicos/bpo.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/bpo.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -72,11 +72,11 @@ $page_content = '
                 <img src="img/home/fiscal.webp" alt="Fiscal - Gestão tributária e benefícios" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Fiscal</h3>
-                <p class="service-card-desc">Garantimos que sua empresa tenha o melhor desempenho tributário,
+                <h3 class="service-card-title" data-translate="home.fiscal">Fiscal</h3>
+                <p class="service-card-desc" data-translate="home.fiscal_desc">Garantimos que sua empresa tenha o melhor desempenho tributário,
                   monitorando alternativas justas que permitam o aproveitamento dos benefícios que a lei possa garantir.
                 </p>
-                <a href="servicos/bpo.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/bpo.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -87,10 +87,10 @@ $page_content = '
                 <img src="img/home/financeiro.webp" alt="Financeiro - Gestão de recursos e investimentos" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Financeiro</h3>
-                <p class="service-card-desc">Aprimoramos a gestão financeira de nossos clientes e apresentando de forma
+                <h3 class="service-card-title" data-translate="home.financeiro">Financeiro</h3>
+                <p class="service-card-desc" data-translate="home.financeiro_desc">Aprimoramos a gestão financeira de nossos clientes e apresentando de forma
                   clara, as informações necessárias para a otimização da gestão de recursos e investimentos.</p>
-                <a href="servicos/bpo.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/bpo.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -102,10 +102,10 @@ $page_content = '
                 <img src="img/home/folha.webp" alt="Folha - Processamento de pagamentos" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Folha</h3>
-                <p class="service-card-desc">Processamento de folha de pagamento, e atendimento consultivo diferenciado,
+                <h3 class="service-card-title" data-translate="home.folha">Folha</h3>
+                <p class="service-card-desc" data-translate="home.folha_desc">Processamento de folha de pagamento, e atendimento consultivo diferenciado,
                   em conformidade com o e-Social e demais obrigações.</p>
-                <a href="servicos/bpo.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/bpo.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -116,11 +116,11 @@ $page_content = '
                 <img src="img/home/tecnologia.webp" alt="Tecnologia - ERP e inteligência artificial" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title">Tecnologia</h3>
-                <p class="service-card-desc">Usamos ERP de ponta ou ERP do cliente, ferramentas complementares e
+                <h3 class="service-card-title" data-translate="home.tecnologia">Tecnologia</h3>
+                <p class="service-card-desc" data-translate="home.tecnologia_desc">Usamos ERP de ponta ou ERP do cliente, ferramentas complementares e
                   inteligência artificial para que nossos clientes tenham informações com confiabilidade e acuracidade.
                 </p>
-                <a href="servicos/tecnologia.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/tecnologia.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -131,10 +131,10 @@ $page_content = '
                 <img src="img/home/paralegal.webp" alt="Paralegal - Processos burocráticos" />
               </div>
               <div class="card-body text-center p-4">
-                <h3 class="service-card-title">Paralegal</h3>
-                <p class="service-card-desc">Nossos serviços de paralegal resolvem os processos burocráticos com
+                <h3 class="service-card-title" data-translate="home.paralegal">Paralegal</h3>
+                <p class="service-card-desc" data-translate="home.paralegal_desc">Nossos serviços de paralegal resolvem os processos burocráticos com
                   maestria, rapidez e precisão, para que sua empresa esteja sempre de acordo com o requerido.</p>
-                <a href="servicos/paralegal.php" class="btn btn-service-outline">Saiba mais</a>
+                <a href="servicos/paralegal.php" class="btn btn-service-outline" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -148,10 +148,10 @@ $page_content = '
                 <img src="img/home/servicos-especiais.webp" alt="Serviços Especiais - Soluções personalizadas" />
               </div>
               <div class="service-card-content">
-                <h3 class="service-card-title text-dark">Serviços Especiais</h3>
-                <p class="service-card-desc text-dark">Nossos serviços especiais são para necessidades específicas que
+                <h3 class="service-card-title text-dark" data-translate="home.servicos_especiais">Serviços Especiais</h3>
+                <p class="service-card-desc text-dark" data-translate="home.servicos_especiais_desc">Nossos serviços especiais são para necessidades específicas que
                   requerem especialistas de alto nível para solucionar as necessidades.</p>
-                <a href="servicos/servicos-especiais.php" class="btn btn-service-primary">Saiba mais</a>
+                <a href="servicos/servicos-especiais.php" class="btn btn-service-primary" data-translate="home.saiba_mais">Saiba mais</a>
               </div>
             </div>
           </div>
@@ -166,13 +166,13 @@ $page_content = '
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
           <div class="cta-accent mb-3"></div>
-          <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
-          <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
+          <h2 class="cta-title mb-3" data-translate="home.cta_title">Pronto para transformar a eficiência do seu negócio?</h2>
+          <p class="cta-desc mb-0" data-translate="home.cta_desc">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
             equipe prepara uma proposta sob medida para a sua realidade.</p>
         </div>
         <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
-          <a href="contato.php" class="btn btn-cta-primary">Entre em Contato</a>
-          <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
+          <a href="contato.php" class="btn btn-cta-primary" data-translate="home.entre_contato">Entre em Contato</a>
+          <a href="#servicos" class="btn btn-cta-outline" data-translate="home.conheca_servicos">Conheça os Serviços</a>
         </div>
       </div>
     </div>

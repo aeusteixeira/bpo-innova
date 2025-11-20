@@ -7,8 +7,8 @@ $page_content = '
         <div class="hero-overlay"></div>
         <div class="container-fluid">
             <div class="hero-content">
-                <h1 class="hero-title mb-3">Vamos Conversar <br> Sobre o Futuro do <br> Seu Negócio?</h1>
-                <p class="hero-sub">Integramos governança de serviços, tecnologia de ponta e expertise sênior para transformar
+                <h1 class="hero-title mb-3" data-translate="contato.hero_title">Vamos Conversar <br> Sobre o Futuro do <br> Seu Negócio?</h1>
+                <p class="hero-sub" data-translate="contato.hero_sub">Integramos governança de serviços, tecnologia de ponta e expertise sênior para transformar
                     seu backoffice em um motor de crescimento. Chega de burocracia, olá performance.</p>
             </div>
             <!-- div class="hero-cta">
@@ -24,10 +24,10 @@ $page_content = '
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="text-center mb-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="contato.titulo_principal">
                             Nossa equipe de especialistas está pronta para entender seus desafios e desenhar a solução ideal para sua empresa.
                         </h2>
-                        <p class="fs-5 text-muted">
+                        <p class="fs-5 text-muted" data-translate="contato.subtitulo">
                             Preencha o formulário ou escolha um dos canais abaixo.
                         </p>
                     </div>
@@ -36,8 +36,8 @@ $page_content = '
                         <!-- Coluna 1: Informações de Contato -->
                         <div class="col-lg-6">
                             <div class="contact-info-section">
-                                <h3 class="h3 fw-bold mb-4 text-dark">Entre em Contato</h3>
-                                <p class="fs-6 text-muted mb-4">Estamos prontos para atender você através dos nossos canais de contato.</p>
+                                <h3 class="h3 fw-bold mb-4 text-dark" data-translate="contato.entre_contato_titulo">Entre em Contato</h3>
+                                <p class="fs-6 text-muted mb-4" data-translate="contato.entre_contato_desc">Estamos prontos para atender você através dos nossos canais de contato.</p>
 
                                 <div class="contact-items">
                                     <div class="contact-item mb-3">
@@ -45,7 +45,7 @@ $page_content = '
                                             <i class="fa-solid fa-phone fa-sm"></i>
                                         </div>
                                         <div class="contact-info">
-                                            <h5 class="contact-label mb-1">Telefone</h5>
+                                            <h5 class="contact-label mb-1" data-translate="contato.telefone">Telefone</h5>
                                             <p class="contact-value mb-0">+55 11 3197-4267</p>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@ $page_content = '
                                             <i class="fa-solid fa-envelope fa-sm"></i>
                                         </div>
                                         <div class="contact-info">
-                                            <h5 class="contact-label mb-1">E-mail</h5>
+                                            <h5 class="contact-label mb-1" data-translate="contato.email">E-mail</h5>
                                             <p class="contact-value mb-0">comercial@bpoinnova-sp.com</p>
                                         </div>
                                     </div>
@@ -65,7 +65,7 @@ $page_content = '
                                             <i class="fa-solid fa-location-dot fa-sm"></i>
                                         </div>
                                         <div class="contact-info">
-                                            <h5 class="contact-label mb-1">Endereço</h5>
+                                            <h5 class="contact-label mb-1" data-translate="contato.endereco">Endereço</h5>
                                             <p class="contact-value mb-0">Av. Queiroz Filho, 1.700 - Torre A - Sala 301<br>São Paulo - SP</p>
                                         </div>
                                     </div>
@@ -86,59 +86,59 @@ $page_content = '
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="nome" class="form-label fw-semibold text-dark">Nome</label>
-                                            <input type="text" class="form-control form-control-lg" id="nome" placeholder="Nome" required>
+                                            <label for="nome" class="form-label fw-semibold text-dark" data-translate="contato.nome">Nome</label>
+                                            <input type="text" class="form-control form-control-lg" id="nome" data-translate-placeholder="contato.nome_placeholder" placeholder="Nome" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="email" class="form-label fw-semibold text-dark">E-mail</label>
-                                            <input type="email" class="form-control form-control-lg" id="email" placeholder="E-mail" required>
+                                            <label for="email" class="form-label fw-semibold text-dark" data-translate="contato.email_label">E-mail</label>
+                                            <input type="email" class="form-control form-control-lg" id="email" data-translate-placeholder="contato.email_placeholder" placeholder="E-mail" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="telefone" class="form-label fw-semibold text-dark">Telefone</label>
-                                            <input type="tel" class="form-control form-control-lg" id="telefone" placeholder="(99) 9 999-99999" required>
+                                            <label for="telefone" class="form-label fw-semibold text-dark" data-translate="contato.telefone_label">Telefone</label>
+                                            <input type="tel" class="form-control form-control-lg" id="telefone" data-translate-placeholder="contato.telefone_placeholder" placeholder="(99) 9 999-99999" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="empresa" class="form-label fw-semibold text-dark">Empresa</label>
-                                            <input type="text" class="form-control form-control-lg" id="empresa" placeholder="Empresa" required>
+                                            <label for="empresa" class="form-label fw-semibold text-dark" data-translate="contato.empresa">Empresa</label>
+                                            <input type="text" class="form-control form-control-lg" id="empresa" data-translate-placeholder="contato.empresa_placeholder" placeholder="Empresa" required>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label for="assunto" class="form-label fw-semibold text-dark">Assunto</label>
+                                            <label for="assunto" class="form-label fw-semibold text-dark" data-translate="contato.assunto">Assunto</label>
                                             <select class="form-select form-select-lg" id="assunto" required>
-                                                <option value="">Selecione um assunto</option>
-                                                <option value="contabilidade">Serviços de Contabilidade</option>
-                                                <option value="fiscal">Serviços Fiscais</option>
-                                                <option value="financeiro">BPO Financeiro</option>
-                                                <option value="folha">Folha de Pagamento</option>
-                                                <option value="tecnologia">Tecnologia e Inovação</option>
-                                                <option value="paralegal">Serviços Paralegais</option>
-                                                <option value="especiais">Serviços Especiais</option>
-                                                <option value="outros">Outros</option>
+                                                <option value="" data-translate="contato.assunto_placeholder">Selecione um assunto</option>
+                                                <option value="contabilidade" data-translate="contato.assunto_contabilidade">Serviços de Contabilidade</option>
+                                                <option value="fiscal" data-translate="contato.assunto_fiscal">Serviços Fiscais</option>
+                                                <option value="financeiro" data-translate="contato.assunto_financeiro">BPO Financeiro</option>
+                                                <option value="folha" data-translate="contato.assunto_folha">Folha de Pagamento</option>
+                                                <option value="tecnologia" data-translate="contato.assunto_tecnologia">Tecnologia e Inovação</option>
+                                                <option value="paralegal" data-translate="contato.assunto_paralegal">Serviços Paralegais</option>
+                                                <option value="especiais" data-translate="contato.assunto_especiais">Serviços Especiais</option>
+                                                <option value="outros" data-translate="contato.assunto_outros">Outros</option>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label for="mensagem" class="form-label fw-semibold text-dark">Mensagem</label>
-                                            <textarea class="form-control form-control-lg" id="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                                            <label for="mensagem" class="form-label fw-semibold text-dark" data-translate="contato.mensagem">Mensagem</label>
+                                            <textarea class="form-control form-control-lg" id="mensagem" rows="4" data-translate-placeholder="contato.mensagem_placeholder" placeholder="Mensagem" required></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-warning btn-lg px-5 w-100">
-                                            <i class="fa-solid fa-paper-plane me-2"></i>Enviar
+                                            <i class="fa-solid fa-paper-plane me-2"></i><span data-translate="contato.enviar">Enviar</span>
                                         </button>
                                     </div>
                                 </div>

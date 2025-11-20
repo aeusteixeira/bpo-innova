@@ -7,8 +7,8 @@ $page_content = '
         <div class="hero-overlay"></div>
         <div class="container-fluid">
             <div class="hero-content">
-                <h1 class="hero-title mb-3">Business Process Outsourcing (BPO) Integrado</h1>
-                <p class="hero-sub">Assumimos a gestão de processos críticos com uma metodologia de governança de serviços única, tecnologia de ponta e uma equipe de especialistas, permitindo que você foque no que realmente importa: o crescimento do seu negócio.
+                <h1 class="hero-title mb-3" data-translate="bpo.hero_title">Business Process Outsourcing (BPO) Integrado</h1>
+                <p class="hero-sub" data-translate="bpo.hero_sub">Assumimos a gestão de processos críticos com uma metodologia de governança de serviços única, tecnologia de ponta e uma equipe de especialistas, permitindo que você foque no que realmente importa: o crescimento do seu negócio.
                 </p>
             </div>
             <!-- div class="hero-cta">
@@ -36,38 +36,38 @@ $page_content = '
                 <!-- Coluna 2: Texto -->
                 <div class="col-lg-6 d-flex align-items-center h-100">
                     <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4 text-dark">
+                        <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="bpo.contabil_fiscal_titulo">
                             BPO Contábil e Fiscal como Ferramenta Estratégica
                         </h2>
-                        <p class="fs-5 mb-4 text-muted">
+                        <p class="fs-5 mb-4 text-muted" data-translate="bpo.contabil_fiscal_desc">
                             Transformamos a contabilidade de uma obrigação em uma fonte de insights valiosos. Garantimos compliance total e geramos relatórios precisos que dão clareza para a tomada de decisão do C-level e do Conselho. Navegamos pela complexidade do sistema tributário brasileiro para mitigar riscos e otimizar sua carga fiscal.
                         </p>
 
                         <div class="mb-4">
-                            <h4 class="h5 text-warning mb-3">Ideal para empresas que enfrentam:</h4>
+                            <h4 class="h5 text-warning mb-3" data-translate="bpo.contabil_fiscal_ideal">Ideal para empresas que enfrentam:</h4>
                             <ul class="list-unstyled">
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Dificuldade em gerar demonstrações financeiras confiáveis e no prazo requerido.</span>
+                                    <span class="text-dark" data-translate="bpo.contabil_fiscal_item1">Dificuldade em gerar demonstrações financeiras confiáveis e no prazo requerido.</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Alto custo e baixa performance com a contabilidade atual (interna ou externa).</span>
+                                    <span class="text-dark" data-translate="bpo.contabil_fiscal_item2">Alto custo e baixa performance com a contabilidade atual (interna ou externa).</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Perda de profissionais estratégicos ou operacionais da equipe interna para o mercado.</span>
+                                    <span class="text-dark" data-translate="bpo.contabil_fiscal_item3">Perda de profissionais estratégicos ou operacionais da equipe interna para o mercado.</span>
                                 </li>
                                 <li class="mb-3 d-flex align-items-start">
                                     <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                                    <span class="text-dark">Insegurança e riscos diante da complexidade das obrigações fiscais.</span>
+                                    <span class="text-dark" data-translate="bpo.contabil_fiscal_item4">Insegurança e riscos diante da complexidade das obrigações fiscais.</span>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Call-to-Action -->
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#contato" class="btn btn-warning btn-lg">
+                            <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                                 Falar com um especialista
                             </a>
                         </div>
@@ -86,38 +86,38 @@ $page_content = '
                 <!-- Coluna 1: Texto -->
                 <div class="col-lg-6 h-100 d-flex align-items-center">
                     <div class="pe-lg-5">
-                         <h2 class="display-5 fw-bold mb-4 text-dark">
+                         <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="bpo.financeiro_titulo">
                            BPO Financeiro com Visibilidade e Controle Total do seu Fluxo de Caixa
                          </h2>
-                         <p class="fs-5 mb-4 text-muted">
+                         <p class="fs-5 mb-4 text-muted" data-translate="bpo.financeiro_desc">
                            Gerenciamos suas contas a pagar e a receber com precisão e eficiência. Nossa gestão financeira garante que os pagamentos sejam feitos no prazo, que os recebíveis sejam monitorados de perto e que você tenha uma visão clara e em tempo real da saúde financeira da sua empresa.
                          </p>
 
                          <div class="mb-4">
-                           <h4 class="h5 text-warning mb-3">Ideal para empresas que buscam:</h4>
+                           <h4 class="h5 text-warning mb-3" data-translate="bpo.financeiro_ideal">Ideal para empresas que buscam:</h4>
                            <ul class="list-unstyled">
                              <li class="mb-3 d-flex align-items-start">
                                <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                               <span class="text-dark">Evitar o risco de multas por atrasos em pagamentos.</span>
+                               <span class="text-dark" data-translate="bpo.financeiro_item1">Evitar o risco de multas por atrasos em pagamentos.</span>
                              </li>
                              <li class="mb-3 d-flex align-items-start">
                                <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                               <span class="text-dark">Ter uma ferramenta eficaz para controlar a inadimplência.</span>
+                               <span class="text-dark" data-translate="bpo.financeiro_item2">Ter uma ferramenta eficaz para controlar a inadimplência.</span>
                              </li>
                              <li class="mb-3 d-flex align-items-start">
                                <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                               <span class="text-dark">Liberar a equipe interna do esforço operacional do contas a receber e contas a pagar.</span>
+                               <span class="text-dark" data-translate="bpo.financeiro_item3">Liberar a equipe interna do esforço operacional do contas a receber e contas a pagar.</span>
                              </li>
                              <li class="mb-3 d-flex align-items-start">
                                <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                               <span class="text-dark">Focar a equipe interna para o de faturamento e cobrança.</span>
+                               <span class="text-dark" data-translate="bpo.financeiro_item4">Focar a equipe interna para o de faturamento e cobrança.</span>
                              </li>
                            </ul>
                          </div>
 
                          <!-- Call-to-Action -->
                          <div class="d-flex flex-wrap gap-3">
-                           <a href="#contato" class="btn btn-warning btn-lg">
+                           <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                              Falar com um especialista
                            </a>
                          </div>
@@ -155,34 +155,34 @@ $page_content = '
             <!-- Coluna 2: Texto -->
             <div class="col-lg-6 h-100 d-flex align-items-center">
               <div class="ps-lg-5">
-                <h2 class="display-5 fw-bold mb-4 text-dark">
+                <h2 class="display-5 fw-bold mb-4 text-dark" data-translate="bpo.folha_titulo">
                   BPO de Folha de Pagamento com Precisão, Conformidade e Cuidado com seu Capital Humano
                 </h2>
-                <p class="fs-5 mb-4 text-muted">
+                <p class="fs-5 mb-4 text-muted" data-translate="bpo.folha_desc">
                   Cuidamos de todo o ciclo da folha de pagamento, desde a admissão até o desligamento. Garantimos precisão absoluta nos cálculos, total conformidade com a legislação trabalhista e a tranquilidade de que seus colaboradores serão pagos corretamente e no prazo, fortalecendo a confiança e a satisfação da equipe.
                 </p>
 
                 <div class="mb-4">
-                  <h4 class="h5 text-warning mb-3">Ideal para empresas que:</h4>
+                  <h4 class="h5 text-warning mb-3" data-translate="bpo.folha_ideal">Ideal para empresas que:</h4>
                   <ul class="list-unstyled">
                     <li class="mb-3 d-flex align-items-start">
                       <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                      <span class="text-dark">Possuem um alto volume de colaboradores e processos complexos de folha.</span>
+                      <span class="text-dark" data-translate="bpo.folha_item1">Possuem um alto volume de colaboradores e processos complexos de folha.</span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
                       <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                      <span class="text-dark">Sofrem com a perda de profissionais estratégicos da área de RH/DP.</span>
+                      <span class="text-dark" data-translate="bpo.folha_item2">Sofrem com a perda de profissionais estratégicos da área de RH/DP.</span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
                       <i class="fa-solid fa-check-circle text-warning me-3 mt-1"></i>
-                      <span class="text-dark">Precisam garantir 100% de conformidade com o eSocial e outras obrigações.</span>
+                      <span class="text-dark" data-translate="bpo.folha_item3">Precisam garantir 100% de conformidade com o eSocial e outras obrigações.</span>
                     </li>
                   </ul>
                 </div>
 
                 <!-- Call-to-Action -->
                 <div class="d-flex flex-wrap gap-3">
-                  <a href="#contato" class="btn btn-warning btn-lg">
+                  <a href="#contato" class="btn btn-warning btn-lg" data-translate="sobre.falar_especialista">
                     Falar com um especialista
                   </a>
                 </div>
@@ -199,13 +199,13 @@ $page_content = '
               <div class="row align-items-center g-4">
                 <div class="col-lg-8">
                   <div class="cta-accent mb-3"></div>
-                  <h2 class="cta-title mb-3">Pronto para transformar a eficiência do seu negócio?</h2>
-                  <p class="cta-desc mb-0">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
+                  <h2 class="cta-title mb-3" data-translate="home.cta_title">Pronto para transformar a eficiência do seu negócio?</h2>
+                  <p class="cta-desc mb-0" data-translate="home.cta_desc">Combine processos otimizados e tecnologia de ponta para crescer com confiança. Nossa
                     equipe prepara uma proposta sob medida para a sua realidade.</p>
                 </div>
                 <div class="col-lg-4 d-flex gap-3 justify-content-lg-end justify-content-start">
-                  <a href="#contato" class="btn btn-cta-primary">Entre em Contato</a>
-                  <a href="#servicos" class="btn btn-cta-outline">Conheça os Serviços</a>
+                  <a href="#contato" class="btn btn-cta-primary" data-translate="home.entre_contato">Entre em Contato</a>
+                  <a href="#servicos" class="btn btn-cta-outline" data-translate="home.conheca_servicos">Conheça os Serviços</a>
                 </div>
               </div>
             </div>
